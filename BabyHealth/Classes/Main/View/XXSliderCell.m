@@ -8,6 +8,11 @@
 
 #import "XXSliderCell.h"
 
+@interface XXSliderCell ()
+@property (weak, nonatomic) IBOutlet UILabel *realLabel;
+
+@end
+
 @implementation XXSliderCell
 
 - (void)awakeFromNib
@@ -18,6 +23,11 @@
 - (void)sliderWillDisplayPopUpView:(ASValueTrackingSlider *)slider;
 {
     [self.superview bringSubviewToFront:self];
+}
+
+- (void)sliderDidHidePopUpView:(ASValueTrackingSlider *)slider
+{
+    self.realLabel.text = [NSString stringWithFormat:@"%0.2f", slider.value];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
