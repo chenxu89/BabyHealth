@@ -1,0 +1,61 @@
+//
+//  PrefixHeader.pch
+//  BabyHealth
+//
+//  Created by 陈旭 on 16/1/16.
+//  Copyright © 2016年 陈旭. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIButton+CZ.h"
+#import "UIImage+CZ.h"
+#import "NSString+CZ.h"
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "NSDate+Extension.h"
+#import "NSString+Extension.h"
+#import "NSString+Emoji.h"
+#import "UITextView+Extension.h"
+
+
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+#ifdef DEBUG // 处于开发阶段
+#define HWLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define HWLog(...)
+#endif
+
+// RGB颜色
+#define HWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define HWRandomColor HWColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+// 测试颜色
+#define HWTestColor [UIColor redColor]
+
+// 项目默认颜色（浅蓝色）
+#define HWTintColor HWColor(47, 180, 254)
+
+// 项目默认选中状态颜色（浅浅蓝色）
+#define HWSelectedColor HWColor(175, 220, 250)
+
+// 精选提问默认颜色（浅绿色）
+#define HWQuestionTintColor HWColor(75, 217, 130)
+
+// 精选提问选中状态颜色（深绿色）
+#define HWQuestionSelectedColor HWColor(5, 128, 0)
+
+// 通知中心
+#define HWNotificationCenter [NSNotificationCenter defaultCenter]
+
+// 打印测试
+#define HWTestLog HWLog(@"%s", __func__)
+
+#endif /* PrefixHeader_pch */

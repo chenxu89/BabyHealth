@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  XXHomeViewController.h
 //  BabyHealth
 //
 //  Created by 陈旭 on 16/1/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface XXHomeViewController : UIViewController
 
 @end
-

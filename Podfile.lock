@@ -1,0 +1,10 @@
+PODS:
+  - ASValueTrackingSlider (0.10.1)
+
+DEPENDENCIES:
+  - ASValueTrackingSlider
+
+SPEC CHECKSUMS:
+  ASValueTrackingSlider: 00fe601d9b5b2efeac515c1673afbf452f8e78ba
+
+COCOAPODS: 0.39.0

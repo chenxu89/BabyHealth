@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D63AD311C4A15AD00C3A1AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD301C4A15AD00C3A1AE /* main.m */; };
-		2D63AD341C4A15AD00C3A1AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD331C4A15AD00C3A1AE /* AppDelegate.m */; };
-		2D63AD371C4A15AD00C3A1AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD361C4A15AD00C3A1AE /* ViewController.m */; };
 		2D63AD3A1C4A15AD00C3A1AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D63AD381C4A15AD00C3A1AE /* Main.storyboard */; };
 		2D63AD3C1C4A15AD00C3A1AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D63AD3B1C4A15AD00C3A1AE /* Assets.xcassets */; };
 		2D63AD3F1C4A15AD00C3A1AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D63AD3D1C4A15AD00C3A1AE /* LaunchScreen.storyboard */; };
 		2D63AD4A1C4A15AE00C3A1AE /* BabyHealthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD491C4A15AE00C3A1AE /* BabyHealthTests.m */; };
 		2D63AD551C4A15AE00C3A1AE /* BabyHealthUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD541C4A15AE00C3A1AE /* BabyHealthUITests.m */; };
+		2D63AD7C1C4A291100C3A1AE /* XXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD6F1C4A291100C3A1AE /* XXHomeViewController.m */; };
+		2D63AD7D1C4A291100C3A1AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD741C4A291100C3A1AE /* AppDelegate.m */; };
+		2D63AD7E1C4A291100C3A1AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD751C4A291100C3A1AE /* main.m */; };
+		2D63AD7F1C4A291100C3A1AE /* XXSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD791C4A291100C3A1AE /* XXSliderCell.m */; };
+		2D63AD801C4A291100C3A1AE /* XXSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D63AD7A1C4A291100C3A1AE /* XXSliderCell.xib */; };
+		2D63AD941C4A294B00C3A1AE /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD831C4A294B00C3A1AE /* NSDate+Extension.m */; };
+		2D63AD951C4A294B00C3A1AE /* NSString+CZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD851C4A294B00C3A1AE /* NSString+CZ.m */; };
+		2D63AD961C4A294B00C3A1AE /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD871C4A294B00C3A1AE /* NSString+Emoji.m */; };
+		2D63AD971C4A294B00C3A1AE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD891C4A294B00C3A1AE /* NSString+Extension.m */; };
+		2D63AD981C4A294B00C3A1AE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD8B1C4A294B00C3A1AE /* UIBarButtonItem+Extension.m */; };
+		2D63AD991C4A294B00C3A1AE /* UIButton+CZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD8D1C4A294B00C3A1AE /* UIButton+CZ.m */; };
+		2D63AD9A1C4A294B00C3A1AE /* UIImage+CZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD8F1C4A294B00C3A1AE /* UIImage+CZ.m */; };
+		2D63AD9B1C4A294B00C3A1AE /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD911C4A294B00C3A1AE /* UITextView+Extension.m */; };
+		2D63AD9C1C4A294B00C3A1AE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD931C4A294B00C3A1AE /* UIView+Extension.m */; };
+		631039C7EF48480B163790B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF0B585961FB2A5247CB163 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +48,6 @@
 
 /* Begin PBXFileReference section */
 		2D63AD2C1C4A15AD00C3A1AE /* BabyHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D63AD301C4A15AD00C3A1AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2D63AD321C4A15AD00C3A1AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2D63AD331C4A15AD00C3A1AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2D63AD351C4A15AD00C3A1AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2D63AD361C4A15AD00C3A1AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2D63AD391C4A15AD00C3A1AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D63AD3B1C4A15AD00C3A1AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D63AD3E1C4A15AD00C3A1AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +58,36 @@
 		2D63AD501C4A15AE00C3A1AE /* BabyHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D63AD541C4A15AE00C3A1AE /* BabyHealthUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyHealthUITests.m; sourceTree = "<group>"; };
 		2D63AD561C4A15AE00C3A1AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D63AD6E1C4A291100C3A1AE /* XXHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXHomeViewController.h; sourceTree = "<group>"; };
+		2D63AD6F1C4A291100C3A1AE /* XXHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXHomeViewController.m; sourceTree = "<group>"; };
+		2D63AD731C4A291100C3A1AE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D63AD741C4A291100C3A1AE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D63AD751C4A291100C3A1AE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D63AD781C4A291100C3A1AE /* XXSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXSliderCell.h; sourceTree = "<group>"; };
+		2D63AD791C4A291100C3A1AE /* XXSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXSliderCell.m; sourceTree = "<group>"; };
+		2D63AD7A1C4A291100C3A1AE /* XXSliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XXSliderCell.xib; sourceTree = "<group>"; };
+		2D63AD821C4A294B00C3A1AE /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		2D63AD831C4A294B00C3A1AE /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		2D63AD841C4A294B00C3A1AE /* NSString+CZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZ.h"; sourceTree = "<group>"; };
+		2D63AD851C4A294B00C3A1AE /* NSString+CZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZ.m"; sourceTree = "<group>"; };
+		2D63AD861C4A294B00C3A1AE /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		2D63AD871C4A294B00C3A1AE /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		2D63AD881C4A294B00C3A1AE /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		2D63AD891C4A294B00C3A1AE /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		2D63AD8A1C4A294B00C3A1AE /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		2D63AD8B1C4A294B00C3A1AE /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		2D63AD8C1C4A294B00C3A1AE /* UIButton+CZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZ.h"; sourceTree = "<group>"; };
+		2D63AD8D1C4A294B00C3A1AE /* UIButton+CZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZ.m"; sourceTree = "<group>"; };
+		2D63AD8E1C4A294B00C3A1AE /* UIImage+CZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CZ.h"; sourceTree = "<group>"; };
+		2D63AD8F1C4A294B00C3A1AE /* UIImage+CZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CZ.m"; sourceTree = "<group>"; };
+		2D63AD901C4A294B00C3A1AE /* UITextView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
+		2D63AD911C4A294B00C3A1AE /* UITextView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
+		2D63AD921C4A294B00C3A1AE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		2D63AD931C4A294B00C3A1AE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		2D63AD9D1C4A296600C3A1AE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		45F5D0CCA4EBEB93721F23C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4EF0B585961FB2A5247CB163 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F993BBCF0255C11B61F27C85 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631039C7EF48480B163790B0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +123,8 @@
 				2D63AD481C4A15AE00C3A1AE /* BabyHealthTests */,
 				2D63AD531C4A15AE00C3A1AE /* BabyHealthUITests */,
 				2D63AD2D1C4A15AD00C3A1AE /* Products */,
+				A8084F66FDFDFE630B71CE8B /* Pods */,
+				E9FEFDC6C5A15C595A6AC6F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +141,7 @@
 		2D63AD2E1C4A15AD00C3A1AE /* BabyHealth */ = {
 			isa = PBXGroup;
 			children = (
-				2D63AD321C4A15AD00C3A1AE /* AppDelegate.h */,
-				2D63AD331C4A15AD00C3A1AE /* AppDelegate.m */,
-				2D63AD351C4A15AD00C3A1AE /* ViewController.h */,
-				2D63AD361C4A15AD00C3A1AE /* ViewController.m */,
-				2D63AD381C4A15AD00C3A1AE /* Main.storyboard */,
-				2D63AD3B1C4A15AD00C3A1AE /* Assets.xcassets */,
-				2D63AD3D1C4A15AD00C3A1AE /* LaunchScreen.storyboard */,
-				2D63AD401C4A15AD00C3A1AE /* Info.plist */,
+				2D63AD6A1C4A291100C3A1AE /* Classes */,
 				2D63AD2F1C4A15AD00C3A1AE /* Supporting Files */,
 			);
 			path = BabyHealth;
@@ -117,7 +150,11 @@
 		2D63AD2F1C4A15AD00C3A1AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2D63AD301C4A15AD00C3A1AE /* main.m */,
+				2D63AD9D1C4A296600C3A1AE /* PrefixHeader.pch */,
+				2D63AD3B1C4A15AD00C3A1AE /* Assets.xcassets */,
+				2D63AD3D1C4A15AD00C3A1AE /* LaunchScreen.storyboard */,
+				2D63AD401C4A15AD00C3A1AE /* Info.plist */,
+				2D63AD381C4A15AD00C3A1AE /* Main.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +177,136 @@
 			path = BabyHealthUITests;
 			sourceTree = "<group>";
 		};
+		2D63AD6A1C4A291100C3A1AE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2D63AD6B1C4A291100C3A1AE /* Main */,
+				2D63AD7B1C4A291100C3A1AE /* Temp */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2D63AD6B1C4A291100C3A1AE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2D63AD6C1C4A291100C3A1AE /* Category */,
+				2D63AD6D1C4A291100C3A1AE /* Controller */,
+				2D63AD701C4A291100C3A1AE /* Lib */,
+				2D63AD711C4A291100C3A1AE /* Model */,
+				2D63AD721C4A291100C3A1AE /* Other */,
+				2D63AD761C4A291100C3A1AE /* Tool */,
+				2D63AD771C4A291100C3A1AE /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2D63AD6C1C4A291100C3A1AE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2D63AD811C4A294B00C3A1AE /* 单例头文件 */,
+				2D63AD821C4A294B00C3A1AE /* NSDate+Extension.h */,
+				2D63AD831C4A294B00C3A1AE /* NSDate+Extension.m */,
+				2D63AD841C4A294B00C3A1AE /* NSString+CZ.h */,
+				2D63AD851C4A294B00C3A1AE /* NSString+CZ.m */,
+				2D63AD861C4A294B00C3A1AE /* NSString+Emoji.h */,
+				2D63AD871C4A294B00C3A1AE /* NSString+Emoji.m */,
+				2D63AD881C4A294B00C3A1AE /* NSString+Extension.h */,
+				2D63AD891C4A294B00C3A1AE /* NSString+Extension.m */,
+				2D63AD8A1C4A294B00C3A1AE /* UIBarButtonItem+Extension.h */,
+				2D63AD8B1C4A294B00C3A1AE /* UIBarButtonItem+Extension.m */,
+				2D63AD8C1C4A294B00C3A1AE /* UIButton+CZ.h */,
+				2D63AD8D1C4A294B00C3A1AE /* UIButton+CZ.m */,
+				2D63AD8E1C4A294B00C3A1AE /* UIImage+CZ.h */,
+				2D63AD8F1C4A294B00C3A1AE /* UIImage+CZ.m */,
+				2D63AD901C4A294B00C3A1AE /* UITextView+Extension.h */,
+				2D63AD911C4A294B00C3A1AE /* UITextView+Extension.m */,
+				2D63AD921C4A294B00C3A1AE /* UIView+Extension.h */,
+				2D63AD931C4A294B00C3A1AE /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2D63AD6D1C4A291100C3A1AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D63AD6E1C4A291100C3A1AE /* XXHomeViewController.h */,
+				2D63AD6F1C4A291100C3A1AE /* XXHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D63AD701C4A291100C3A1AE /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		2D63AD711C4A291100C3A1AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D63AD721C4A291100C3A1AE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2D63AD731C4A291100C3A1AE /* AppDelegate.h */,
+				2D63AD741C4A291100C3A1AE /* AppDelegate.m */,
+				2D63AD751C4A291100C3A1AE /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2D63AD761C4A291100C3A1AE /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		2D63AD771C4A291100C3A1AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D63AD781C4A291100C3A1AE /* XXSliderCell.h */,
+				2D63AD791C4A291100C3A1AE /* XXSliderCell.m */,
+				2D63AD7A1C4A291100C3A1AE /* XXSliderCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D63AD7B1C4A291100C3A1AE /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Temp;
+			sourceTree = "<group>";
+		};
+		2D63AD811C4A294B00C3A1AE /* 单例头文件 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "单例头文件";
+			sourceTree = "<group>";
+		};
+		A8084F66FDFDFE630B71CE8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45F5D0CCA4EBEB93721F23C9 /* Pods.debug.xcconfig */,
+				F993BBCF0255C11B61F27C85 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9FEFDC6C5A15C595A6AC6F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EF0B585961FB2A5247CB163 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D63AD591C4A15AE00C3A1AE /* Build configuration list for PBXNativeTarget "BabyHealth" */;
 			buildPhases = (
+				F7CF6A519DCB0D8E9C87C32A /* Check Pods Manifest.lock */,
 				2D63AD281C4A15AD00C3A1AE /* Sources */,
 				2D63AD291C4A15AD00C3A1AE /* Frameworks */,
 				2D63AD2A1C4A15AD00C3A1AE /* Resources */,
+				600C618489FD1B84DFF3BD3F /* Embed Pods Frameworks */,
+				6F3419D2F42FF55C97228098 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,11 +372,13 @@
 		2D63AD241C4A15AD00C3A1AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XX;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "陈旭";
 				TargetAttributes = {
 					2D63AD2B1C4A15AD00C3A1AE = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8TM9F2U9GU;
 					};
 					2D63AD441C4A15AE00C3A1AE = {
 						CreatedOnToolsVersion = 7.2;
@@ -243,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D63AD801C4A291100C3A1AE /* XXSliderCell.xib in Resources */,
 				2D63AD3F1C4A15AD00C3A1AE /* LaunchScreen.storyboard in Resources */,
 				2D63AD3C1C4A15AD00C3A1AE /* Assets.xcassets in Resources */,
 				2D63AD3A1C4A15AD00C3A1AE /* Main.storyboard in Resources */,
@@ -265,14 +438,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		600C618489FD1B84DFF3BD3F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F3419D2F42FF55C97228098 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7CF6A519DCB0D8E9C87C32A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2D63AD281C4A15AD00C3A1AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D63AD371C4A15AD00C3A1AE /* ViewController.m in Sources */,
-				2D63AD341C4A15AD00C3A1AE /* AppDelegate.m in Sources */,
-				2D63AD311C4A15AD00C3A1AE /* main.m in Sources */,
+				2D63AD7F1C4A291100C3A1AE /* XXSliderCell.m in Sources */,
+				2D63AD941C4A294B00C3A1AE /* NSDate+Extension.m in Sources */,
+				2D63AD9C1C4A294B00C3A1AE /* UIView+Extension.m in Sources */,
+				2D63AD961C4A294B00C3A1AE /* NSString+Emoji.m in Sources */,
+				2D63AD7D1C4A291100C3A1AE /* AppDelegate.m in Sources */,
+				2D63AD991C4A294B00C3A1AE /* UIButton+CZ.m in Sources */,
+				2D63AD9A1C4A294B00C3A1AE /* UIImage+CZ.m in Sources */,
+				2D63AD7E1C4A291100C3A1AE /* main.m in Sources */,
+				2D63AD9B1C4A294B00C3A1AE /* UITextView+Extension.m in Sources */,
+				2D63AD951C4A294B00C3A1AE /* NSString+CZ.m in Sources */,
+				2D63AD981C4A294B00C3A1AE /* UIBarButtonItem+Extension.m in Sources */,
+				2D63AD7C1C4A291100C3A1AE /* XXHomeViewController.m in Sources */,
+				2D63AD971C4A294B00C3A1AE /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,8 +640,10 @@
 		};
 		2D63AD5A1C4A15AE00C3A1AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F5D0CCA4EBEB93721F23C9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BabyHealth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChenXu.BabyHealth;
@@ -420,8 +653,10 @@
 		};
 		2D63AD5B1C4A15AE00C3A1AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F993BBCF0255C11B61F27C85 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BabyHealth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChenXu.BabyHealth;
@@ -496,6 +731,7 @@
 				2D63AD5B1C4A15AE00C3A1AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D63AD5C1C4A15AE00C3A1AE /* Build configuration list for PBXNativeTarget "BabyHealthTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +740,7 @@
 				2D63AD5E1C4A15AE00C3A1AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D63AD5F1C4A15AE00C3A1AE /* Build configuration list for PBXNativeTarget "BabyHealthUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +749,7 @@
 				2D63AD611C4A15AE00C3A1AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
