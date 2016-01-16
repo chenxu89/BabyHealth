@@ -14,15 +14,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HAT-A2-7Aq" customClass="ASValueTrackingSlider">
-                        <rect key="frame" x="-2" y="5" width="256" height="31"/>
-                    </slider>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-t7-LgE">
-                        <rect key="frame" x="260" y="-1" width="60" height="43.5"/>
+                        <rect key="frame" x="260" y="-1" width="52" height="43.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HAT-A2-7Aq" customClass="ASValueTrackingSlider">
+                        <rect key="frame" x="17" y="5" width="245" height="31"/>
+                        <connections>
+                            <action selector="dragSlider:" destination="KGk-i7-Jjw" eventType="valueChanged" id="1E4-1L-nkm"/>
+                        </connections>
+                    </slider>
                 </subviews>
             </tableViewCellContentView>
             <connections>
