@@ -36,6 +36,14 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // navSegmentedControl
+    NSArray *arr = [NSArray arrayWithObjects:@"喂养情况", @"生活情况", @"体格记录", nil];
+    UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:arr];
+    [segment setTintColor:HWTintColor];
+    [segment addTarget:self action:@selector(selected:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = segment;
+    
+    
     // ageSegmentedControl
     self.ageSegmentedControl = [[RS3DSegmentedControl alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44)];
     _ageSegmentedControl.delegate = self;
@@ -63,6 +71,24 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 切换navSegmentedControl
+- (void)selected:(UISegmentedControl *)segment{
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            HWLog(@"0");
+            break;
+        case 1:
+            HWLog(@"1");
+            break;
+        case 2:
+            HWLog(@"2");
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - Table view data source
