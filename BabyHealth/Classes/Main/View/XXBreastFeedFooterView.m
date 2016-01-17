@@ -8,8 +8,7 @@
 
 #import "XXBreastFeedFooterView.h"
 
-@interface XXBreastFeedFooterView () 
-@property (weak, nonatomic) IBOutlet UIButton *stopBreastFeedBtn;
+@interface XXBreastFeedFooterView ()
 
 @end
 
@@ -20,10 +19,14 @@
     [self.stopBreastFeedBtn setTitle:@"YES" forState:UIControlStateSelected];
 }
 - (IBAction)stopBreastFeed:(UIButton *)btn {
+    
     if ([self.delegate respondsToSelector:@selector(breastFeedFooterView:didClickStopBreastFeedButton:)]) {
         [self.delegate breastFeedFooterView:self didClickStopBreastFeedButton:btn];
     }
 }
 
+- (void)dealloc{
+    HWTestLog;
+}
 
 @end

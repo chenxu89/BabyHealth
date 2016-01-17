@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class XXBreastFeedFooterView;
 
 @protocol XXBreastFeedFooterViewDelegate <NSObject>
@@ -18,4 +19,5 @@
 
 @interface XXBreastFeedFooterView : UITableViewHeaderFooterView
 @property (nonatomic, weak) id<XXBreastFeedFooterViewDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIButton *stopBreastFeedBtn;
 @end
