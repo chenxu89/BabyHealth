@@ -51,7 +51,9 @@
     
     self.slider.minimumValue = recordValue.minimumValue;// 最小值
     self.slider.maximumValue = recordValue.maximumValue;// 最大值
+    
     self.slider.value = recordValue.realValue; // thumb初始位置
+    
     [self.slider setMaxFractionDigitsDisplayed:feedRecord.fractionDigits];// 小数位数
     
     self.mainKeyLabel.text = [NSString stringWithFormat:@"%@ %@", feedRecord.mainKey, feedRecord.subKey];
@@ -82,6 +84,9 @@
     }else{
         self.realLabel.text = [NSString stringWithFormat:@"%0.0f", slider.value];
     }
+    
+    // 设置realValue
+    self.feedRecord.recordValue.realValue = slider.value;
     
     [self setupSliderColorSections:self.feedRecord.recordValue];
 }

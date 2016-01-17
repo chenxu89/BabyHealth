@@ -18,5 +18,4 @@
 @property (nonatomic, assign, getter=isCustom) BOOL custom;
 @property (nonatomic, strong) XXRecordValue *recordValue;
 
-
 @end

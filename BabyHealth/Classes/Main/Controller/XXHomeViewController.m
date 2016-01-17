@@ -15,10 +15,12 @@
 NSString * const SliderCellIdentifier = @"SliderCellIdentifier";
 NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewIdentifier";
 
-@interface XXHomeViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface XXHomeViewController () <UITableViewDataSource, UITableViewDelegate, XXBreastFeedFooterViewDelegate>
 @property (nonatomic, weak) UIView *ageSegment;
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) NSArray *feedRecords;
+
+@property (nonatomic, assign, getter=isStopBreastFeed) BOOL stopBreastFeed;// 是否母乳喂养
 @end
 
 @implementation XXHomeViewController
@@ -85,6 +87,23 @@ NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewIdentifi
     XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:SliderCellIdentifier forIndexPath:indexPath];
     
     cell.feedRecord = rows[indexPath.row];
+    
+    // 断母乳就隐藏section0的所有cell
+    if (indexPath.section == 0) {
+        if (self.isStopBreastFeed) {
+            cell.userInteractionEnabled = NO;
+            [UIView animateWithDuration:0.5 animations:^{
+                cell.backgroundColor = [UIColor grayColor];
+            }];
+//                cell.hidden = YES;
+        }else{
+            cell.userInteractionEnabled = YES;
+            [UIView animateWithDuration:0.5 animations:^{
+                cell.backgroundColor = [UIColor whiteColor];
+            }];
+//                cell.hidden = NO;
+        }
+    }
 
     return cell;
 }
@@ -97,6 +116,14 @@ NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewIdentifi
 
 #pragma mark - cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    // 断母乳就隐藏section0的所有cell
+//    if (indexPath.section == 0) {
+//        if (self.isStopBreastFeed) {
+//            return 0;
+//        }else{
+//            return 80;
+//        }
+//    }
     return 80;
 }
 
@@ -104,6 +131,8 @@ NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewIdentifi
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     if (section == 0) {
         XXBreastFeedFooterView *footer = (XXBreastFeedFooterView *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:BreastFeedFooterViewIdentifier];
+        footer.delegate = self;
+        footer.tag = section;
         return footer;
     }else{
         return nil;
@@ -117,7 +146,22 @@ NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewIdentifi
     }else{
         return 0;
     }
-    
 }
+
+#pragma mark - FooterView的delegate，点击断母乳按钮
+- (void)breastFeedFooterView:(XXBreastFeedFooterView *)footerView didClickStopBreastFeedButton:(UIButton *)btn{
+
+    btn.selected = !btn.selected;
+    if (btn.selected) {//已断母乳
+        self.stopBreastFeed = YES;
+    }else{//未断母乳
+        self.stopBreastFeed = NO;
+    }
+    
+    [self.tableView reloadData];
+    
+//    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:footerView.tag]withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 @end

@@ -20,8 +20,9 @@
     [self.stopBreastFeedBtn setTitle:@"YES" forState:UIControlStateSelected];
 }
 - (IBAction)stopBreastFeed:(UIButton *)btn {
-    btn.selected = !btn.selected;
-    
+    if ([self.delegate respondsToSelector:@selector(breastFeedFooterView:didClickStopBreastFeedButton:)]) {
+        [self.delegate breastFeedFooterView:self didClickStopBreastFeedButton:btn];
+    }
 }
 
 
