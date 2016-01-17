@@ -98,10 +98,11 @@
  */
 - (void)setupSliderColorSections:(XXRecordValue *)recordValue{
     
-    UIColor *red = [UIColor redColor];
-    UIColor *yellow = [UIColor yellowColor];
-    UIColor *green = [UIColor greenColor];
+    UIColor *green = [UIColor colorWithHue:0.3 saturation:0.65 brightness:0.8 alpha:1.0];
+    UIColor *yellow = [UIColor colorWithHue:0.15 saturation:0.9 brightness:0.9 alpha:1.0];
+    UIColor *red = [UIColor colorWithHue:0.0 saturation:0.8 brightness:1.0 alpha:1.0];
     
+    // slider左边在滑动时候会变色
     if (self.slider.value <= recordValue.dangerLessValue) {
         
         [self.slider setPopUpViewColor:red];
@@ -123,6 +124,12 @@
         [self.slider setPopUpViewColor:red];
         self.slider.minimumTrackTintColor = red;
     }
+    
+    
+    // cell中各种label也跟着变色
+    self.mainKeyLabel.textColor = self.slider.minimumTrackTintColor;
+    self.realLabel.textColor = self.slider.minimumTrackTintColor;
+    self.unitLabel.textColor = self.slider.minimumTrackTintColor;
 }
 
 #pragma mark - ASValueTrackingSliderDataSource
