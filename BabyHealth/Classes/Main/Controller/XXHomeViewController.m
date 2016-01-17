@@ -53,18 +53,20 @@
     
     // 移除旧控制器的view
     XXBaseViewController *oldVc = self.childViewControllers[self.fromIndex];
-    [oldVc.view removeFromSuperview];
+//    [oldVc.view removeFromSuperview];
     
     // 显示新控制器的view
     XXBaseViewController *newVc = self.childViewControllers[segment.selectedSegmentIndex];
-    [self.view addSubview:newVc.view];
+//    [self.view addSubview:newVc.view];
+    
+    // 动画切换两个view
+    [UIView transitionFromView:oldVc.view toView:newVc.view duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
+    //这个api 原理   ：
+    //        1:[fromvalue.superview addSubview:tovalue];
+    //        2:[fromvalue removeFromSuperview];
     
     // 重置之前索引
     self.fromIndex = toIndex;
 }
-
-
-
-
 
 @end
