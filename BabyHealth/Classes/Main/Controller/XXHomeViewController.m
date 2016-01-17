@@ -10,7 +10,10 @@
 #import "XXSliderCell.h"
 #import <MJExtension.h>
 #import "XXFeedRecord.h"
+#import "XXBreastFeedFooterView.h"
 
+NSString * const SliderCellIdentifier = @"SliderCellIdentifier";
+NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewIdentifier";
 
 @interface XXHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) UIView *ageSegment;
@@ -45,13 +48,16 @@
     
     tableView.delegate = self;
     tableView.dataSource = self;
-    [tableView registerNib:[UINib nibWithNibName:@"XXSliderCell" bundle:nil] forCellReuseIdentifier:@"SliderCell"];// 注册cell
+    
     [self.view addSubview:tableView];
     [self.view bringSubviewToFront:tableView];
     self.tableView = tableView;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"data.plist" ofType:nil];
-    NSArray *array = [NSArray arrayWithContentsOfFile:path];
-    NSLog(@"%@", array);
+    
+    // 注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"XXSliderCell" bundle:nil] forCellReuseIdentifier:SliderCellIdentifier];
+    
+    // 注册FooterView
+    [self.tableView registerNib:[UINib nibWithNibName:@"XXBreastFeedFooterView" bundle:nil] forHeaderFooterViewReuseIdentifier:BreastFeedFooterViewIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,19 +69,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.feedRecords.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.feedRecords.count;
+    NSArray *rows = self.feedRecords[section];
+    return rows.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SliderCell" forIndexPath:indexPath];
-    cell.feedRecord = self.feedRecords[indexPath.row];
+    NSArray *rows = self.feedRecords[indexPath.section];
     
+    XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:SliderCellIdentifier forIndexPath:indexPath];
+    
+    cell.feedRecord = rows[indexPath.row];
+
     return cell;
 }
 
@@ -85,9 +95,29 @@
 //    }
 }
 
+#pragma mark - cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80;
 }
 
+#pragma mark - 自定义的FooterView
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    if (section == 0) {
+        XXBreastFeedFooterView *footer = (XXBreastFeedFooterView *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:BreastFeedFooterViewIdentifier];
+        return footer;
+    }else{
+        return nil;
+    }
+}
+
+#pragma mark - FooterView的高度
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if (section == 0) {
+        return 44;
+    }else{
+        return 0;
+    }
+    
+}
 
 @end
