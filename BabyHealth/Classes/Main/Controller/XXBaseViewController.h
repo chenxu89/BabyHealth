@@ -10,6 +10,7 @@
 #import <RS3DSegmentedControl.h>
 #import <MJExtension.h>
 #import "XXSliderCell.h"
+#import "XXRecord.h"
 
 static NSString * const SliderCellIdentifier = @"SliderCellIdentifier";
 

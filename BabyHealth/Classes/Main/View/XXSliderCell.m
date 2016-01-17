@@ -7,7 +7,7 @@
 //
 
 #import "XXSliderCell.h"
-#import "XXFeedRecord.h"
+#import "XXRecord.h"
 
 @interface XXSliderCell ()<ASValueTrackingSliderDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *mainKeyLabel;
@@ -44,7 +44,7 @@
     [self.superview bringSubviewToFront:self];
 }
 
-- (void)setFeedRecord:(XXFeedRecord *)feedRecord{
+- (void)setFeedRecord:(XXRecord *)feedRecord{
     _feedRecord = feedRecord;
     
     XXRecordValue *recordValue = feedRecord.recordValue;

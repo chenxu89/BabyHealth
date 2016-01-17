@@ -12,6 +12,9 @@
 #import "XXBodyViewController.h"
 
 @interface XXHomeViewController ()
+
+@property (nonatomic, assign) NSInteger fromIndex;
+
 @end
 
 @implementation XXHomeViewController
@@ -20,6 +23,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 添加子控制器
+    XXFeedViewController *feedVc = [[XXFeedViewController alloc] init];
+    [self addChildViewController:feedVc];
+    
+    XXLifeViewController *lifeVc = [[XXLifeViewController alloc] init];
+    [self addChildViewController:lifeVc];
+    
+    XXBodyViewController *bodyVc = [[XXBodyViewController alloc] init];
+    [self addChildViewController:bodyVc];
+    
+    // 默认显示XXFeedViewController
+    [self.view addSubview:feedVc.view];
+    
     // navSegmentedControl
     NSArray *arr = [NSArray arrayWithObjects:@"喂养情况", @"生活情况", @"体格记录", nil];
     UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:arr];
@@ -27,29 +43,24 @@
     [segment addTarget:self action:@selector(selected:) forControlEvents:UIControlEventValueChanged];
     segment.selectedSegmentIndex = 0;//选中第几个segment 一般用于初始化时选中
     self.navigationItem.titleView = segment;
-    
-    // XXFeedViewController
-    XXFeedViewController *feedVc = [[XXFeedViewController alloc] init];
-    [self addChildViewController:feedVc];
-    [self.view addSubview:feedVc.view];
 }
 
 #pragma mark - 切换navSegmentedControl
 - (void)selected:(UISegmentedControl *)segment{
-    switch (segment.selectedSegmentIndex) {
-        case 0:
-            HWLog(@"0");
-            break;
-        case 1:
-            HWLog(@"1");
-            break;
-        case 2:
-            HWLog(@"2");
-            break;
-            
-        default:
-            break;
-    }
+    
+    // 目标索引
+    NSInteger toIndex = segment.selectedSegmentIndex;
+    
+    // 移除旧控制器的view
+    XXBaseViewController *oldVc = self.childViewControllers[self.fromIndex];
+    [oldVc.view removeFromSuperview];
+    
+    // 显示新控制器的view
+    XXBaseViewController *newVc = self.childViewControllers[segment.selectedSegmentIndex];
+    [self.view addSubview:newVc.view];
+    
+    // 重置之前索引
+    self.fromIndex = toIndex;
 }
 
 

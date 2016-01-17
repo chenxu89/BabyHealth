@@ -7,7 +7,6 @@
 //
 
 #import "XXFeedViewController.h"
-#import "XXFeedRecord.h"
 #import "XXBreastFeedFooterView.h"
 
 
@@ -24,7 +23,7 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
 - (NSArray *)feedRecords
 {
     if (!_feedRecords) {
-        _feedRecords = [XXFeedRecord objectArrayWithFilename:@"feedRecords.plist"];
+        _feedRecords = [XXRecord objectArrayWithFilename:@"feedRecords.plist"];
     }
     return _feedRecords;
 }

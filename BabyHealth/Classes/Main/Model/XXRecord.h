@@ -1,5 +1,5 @@
 //
-//  XXFeedRecord.h
+//  XXRecord.h
 //  BabyHealth
 //
 //  Created by 陈旭 on 16/1/16.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XXRecordValue.h"
 
-@interface XXFeedRecord : NSObject
+@interface XXRecord : NSObject
 
 @property (nonatomic, copy) NSString *mainKey;
 @property (nonatomic, copy) NSString *subKey;

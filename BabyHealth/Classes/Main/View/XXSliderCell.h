@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <ASValueTrackingSlider.h>
-@class XXFeedRecord;
+@class XXRecord;
 @interface XXSliderCell : UITableViewCell <ASValueTrackingSliderDelegate>
 @property (weak, nonatomic) IBOutlet ASValueTrackingSlider *slider;
 
 /**
  *  数据模型
  */
-@property (nonatomic, strong) XXFeedRecord *feedRecord;
+@property (nonatomic, strong) XXRecord *feedRecord;
 @end
