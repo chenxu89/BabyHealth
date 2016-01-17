@@ -1,10 +1,13 @@
 PODS:
   - ASValueTrackingSlider (0.10.1)
+  - MJExtension (2.5.6)
 
 DEPENDENCIES:
   - ASValueTrackingSlider
+  - MJExtension
 
 SPEC CHECKSUMS:
   ASValueTrackingSlider: 00fe601d9b5b2efeac515c1673afbf452f8e78ba
+  MJExtension: 5ea3e326162ccc07c60afe8cc36c936bba20d0d5
 
 COCOAPODS: 0.39.0

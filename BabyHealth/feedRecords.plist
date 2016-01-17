@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>mainKey</key>
+		<string>牛奶</string>
+		<key>subKey</key>
+		<string></string>
+		<key>unit</key>
+		<string>毫升/日</string>
+		<key>realValue</key>
+		<integer>50</integer>
+		<key>minimumValue</key>
+		<integer>0</integer>
+		<key>maximumValue</key>
+		<integer>100</integer>
+		<key>fractionDigits</key>
+		<integer>0</integer>
+		<key>colorSections</key>
+		<array>
+			<integer>20</integer>
+			<integer>40</integer>
+			<integer>60</integer>
+			<integer>80</integer>
+		</array>
+	</dict>
+</array>
+</plist>

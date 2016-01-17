@@ -26,6 +26,9 @@
 		2D63AD9A1C4A294B00C3A1AE /* UIImage+CZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD8F1C4A294B00C3A1AE /* UIImage+CZ.m */; };
 		2D63AD9B1C4A294B00C3A1AE /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD911C4A294B00C3A1AE /* UITextView+Extension.m */; };
 		2D63AD9C1C4A294B00C3A1AE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63AD931C4A294B00C3A1AE /* UIView+Extension.m */; };
+		2D63AD9F1C4A5D1A00C3A1AE /* feedRecords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D63AD9E1C4A5D1A00C3A1AE /* feedRecords.plist */; };
+		2D63ADA21C4A688600C3A1AE /* XXFeedRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63ADA11C4A688600C3A1AE /* XXFeedRecord.m */; };
+		2D63ADA41C4A6C3D00C3A1AE /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63ADA31C4A6C3D00C3A1AE /* Foundation+Log.m */; };
 		631039C7EF48480B163790B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF0B585961FB2A5247CB163 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,10 @@
 		2D63AD921C4A294B00C3A1AE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		2D63AD931C4A294B00C3A1AE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		2D63AD9D1C4A296600C3A1AE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2D63AD9E1C4A5D1A00C3A1AE /* feedRecords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = feedRecords.plist; sourceTree = "<group>"; };
+		2D63ADA01C4A688600C3A1AE /* XXFeedRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXFeedRecord.h; sourceTree = "<group>"; };
+		2D63ADA11C4A688600C3A1AE /* XXFeedRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXFeedRecord.m; sourceTree = "<group>"; };
+		2D63ADA31C4A6C3D00C3A1AE /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		45F5D0CCA4EBEB93721F23C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4EF0B585961FB2A5247CB163 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F993BBCF0255C11B61F27C85 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +157,7 @@
 		2D63AD2F1C4A15AD00C3A1AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D63AD9E1C4A5D1A00C3A1AE /* feedRecords.plist */,
 				2D63AD9D1C4A296600C3A1AE /* PrefixHeader.pch */,
 				2D63AD3B1C4A15AD00C3A1AE /* Assets.xcassets */,
 				2D63AD3D1C4A15AD00C3A1AE /* LaunchScreen.storyboard */,
@@ -204,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				2D63AD811C4A294B00C3A1AE /* 单例头文件 */,
+				2D63ADA31C4A6C3D00C3A1AE /* Foundation+Log.m */,
 				2D63AD821C4A294B00C3A1AE /* NSDate+Extension.h */,
 				2D63AD831C4A294B00C3A1AE /* NSDate+Extension.m */,
 				2D63AD841C4A294B00C3A1AE /* NSString+CZ.h */,
@@ -245,6 +254,8 @@
 		2D63AD711C4A291100C3A1AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D63ADA01C4A688600C3A1AE /* XXFeedRecord.h */,
+				2D63ADA11C4A688600C3A1AE /* XXFeedRecord.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,6 +429,7 @@
 				2D63AD801C4A291100C3A1AE /* XXSliderCell.xib in Resources */,
 				2D63AD3F1C4A15AD00C3A1AE /* LaunchScreen.storyboard in Resources */,
 				2D63AD3C1C4A15AD00C3A1AE /* Assets.xcassets in Resources */,
+				2D63AD9F1C4A5D1A00C3A1AE /* feedRecords.plist in Resources */,
 				2D63AD3A1C4A15AD00C3A1AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,7 +514,9 @@
 				2D63AD9B1C4A294B00C3A1AE /* UITextView+Extension.m in Sources */,
 				2D63AD951C4A294B00C3A1AE /* NSString+CZ.m in Sources */,
 				2D63AD981C4A294B00C3A1AE /* UIBarButtonItem+Extension.m in Sources */,
+				2D63ADA41C4A6C3D00C3A1AE /* Foundation+Log.m in Sources */,
 				2D63AD7C1C4A291100C3A1AE /* XXHomeViewController.m in Sources */,
+				2D63ADA21C4A688600C3A1AE /* XXFeedRecord.m in Sources */,
 				2D63AD971C4A294B00C3A1AE /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,13 +8,26 @@
 
 #import "XXHomeViewController.h"
 #import "XXSliderCell.h"
+#import <MJExtension.h>
+#import "XXFeedRecord.h"
+
 
 @interface XXHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) UIView *ageSegment;
 @property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, strong) NSArray *feedRecords;
 @end
 
 @implementation XXHomeViewController
+
+- (NSArray *)feedRecords
+{
+    if (!_feedRecords) {
+        _feedRecords = [XXFeedRecord objectArrayWithFilename:@"feedRecords.plist"];
+    }
+    return _feedRecords;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +49,9 @@
     [self.view addSubview:tableView];
     [self.view bringSubviewToFront:tableView];
     self.tableView = tableView;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"data.plist" ofType:nil];
+    NSArray *array = [NSArray arrayWithContentsOfFile:path];
+    NSLog(@"%@", array);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,12 +68,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SliderCell" forIndexPath:indexPath];
+    XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SliderCell" forIndexPath:indexPath];
+    cell.feedRecord = self.feedRecords[indexPath.row];
+    
     return cell;
 }
 
@@ -65,6 +83,10 @@
     if (indexPath.row % 2 == 1) {
         cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
 }
 
 
