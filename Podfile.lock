@@ -1,13 +1,19 @@
 PODS:
   - ASValueTrackingSlider (0.10.1)
+  - iCarousel (1.8.2)
   - MJExtension (2.5.6)
+  - RS3DSegmentedControl (0.2.5):
+    - iCarousel
 
 DEPENDENCIES:
   - ASValueTrackingSlider
   - MJExtension
+  - RS3DSegmentedControl
 
 SPEC CHECKSUMS:
   ASValueTrackingSlider: 00fe601d9b5b2efeac515c1673afbf452f8e78ba
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   MJExtension: 5ea3e326162ccc07c60afe8cc36c936bba20d0d5
+  RS3DSegmentedControl: ba67c29b0947eb83b2e510114176f68103cbc498
 
 COCOAPODS: 0.39.0

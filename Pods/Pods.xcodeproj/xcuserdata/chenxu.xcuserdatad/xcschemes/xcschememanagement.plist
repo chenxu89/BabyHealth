@@ -19,15 +19,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RS3DSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>iCarousel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A22CF909878083338EA0EA0144362791</key>
+		<key>292BB8E143FC905B1284D514C3DB7CF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9494390523250106847516AB47E5F9FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B0D11334C5005D7FF23C3BC0FE86B92A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0C531ECA60E1DD4F930E95374F3C9AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

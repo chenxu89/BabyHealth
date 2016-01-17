@@ -16,7 +16,6 @@ static NSString * const SliderCellIdentifier = @"SliderCellIdentifier";
 static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewIdentifier";
 
 @interface XXHomeViewController () <UITableViewDataSource, UITableViewDelegate, XXBreastFeedFooterViewDelegate>
-@property (nonatomic, weak) UIView *ageSegment;
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) NSArray *feedRecords;
 
@@ -37,16 +36,15 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // ageSegment
-    UIView *ageSegment = [[UIView alloc] init];
-    ageSegment.backgroundColor = [UIColor purpleColor];
-    ageSegment.frame = CGRectMake(0, 64, self.view.bounds.size.width, 44);
-    [self.view addSubview:ageSegment];
-    self.ageSegment = ageSegment;
+    // ageSegmentedControl
+    self.ageSegmentedControl = [[RS3DSegmentedControl alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44)];
+    _ageSegmentedControl.delegate = self;
+    _ageSegmentedControl.backgroundColor = HWTintColor;
+    [self.view addSubview:_ageSegmentedControl];
     
     // tableView
     UITableView *tableView = [[UITableView alloc] init];
-    tableView.frame = CGRectMake(0, CGRectGetMaxY(ageSegment.frame), self.view.bounds.size.width, self.view.bounds.size.height - CGRectGetMaxY(ageSegment.frame));
+    tableView.frame = CGRectMake(0, CGRectGetMaxY(_ageSegmentedControl.frame), self.view.bounds.size.width, self.view.bounds.size.height - CGRectGetMaxY(_ageSegmentedControl.frame));
     
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -158,6 +156,42 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     //    [self.tableView reloadData];
+}
+
+#pragma mark - RS3DSegmentedControlDelegate
+- (NSUInteger)numberOfSegmentsIn3DSegmentedControl:(RS3DSegmentedControl *)segmentedControl
+{
+    return 8;
+}
+
+- (NSString *)titleForSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl
+{
+    switch (segmentIndex) {
+        case 0:
+            return @"一月";
+        case 1:
+            return @"二月";
+        case 2:
+            return @"四月";
+        case 3:
+            return @"六月";
+        case 4:
+            return @"九月";
+        case 5:
+            return @"一岁";
+        case 6:
+            return @"一岁半";
+        case 7:
+            return @"二岁";
+            
+        default:
+            return @"六月";
+    }
+}
+
+
+- (void)didSelectSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl
+{
 }
 
 

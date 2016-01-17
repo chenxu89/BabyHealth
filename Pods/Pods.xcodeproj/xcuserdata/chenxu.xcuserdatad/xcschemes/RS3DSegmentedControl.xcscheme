@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '957AEEE72508338A0DA6FA5B'
-               BlueprintName = 'MJExtension'
+               BlueprintIdentifier = 'EED697330F404F77920300EA'
+               BlueprintName = 'RS3DSegmentedControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMJExtension.a'>
+               BuildableName = 'libRS3DSegmentedControl.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
