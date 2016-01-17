@@ -32,6 +32,10 @@
 		2D63ADA71C4B6BDB00C3A1AE /* XXRecordValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63ADA61C4B6BDB00C3A1AE /* XXRecordValue.m */; };
 		2D63ADAF1C4BB31600C3A1AE /* XXBreastFeedFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63ADAE1C4BB31600C3A1AE /* XXBreastFeedFooterView.m */; };
 		2D63ADB11C4BB31E00C3A1AE /* XXBreastFeedFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D63ADB01C4BB31E00C3A1AE /* XXBreastFeedFooterView.xib */; };
+		2DCFBFCF1C4BEBDB00E99820 /* XXFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBFCE1C4BEBDB00E99820 /* XXFeedViewController.m */; };
+		2DCFBFD21C4BEBEB00E99820 /* XXLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBFD11C4BEBEB00E99820 /* XXLifeViewController.m */; };
+		2DCFBFD51C4BEBF300E99820 /* XXBodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBFD41C4BEBF300E99820 /* XXBodyViewController.m */; };
+		2DCFBFD81C4BEC7F00E99820 /* XXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBFD71C4BEC7F00E99820 /* XXBaseViewController.m */; };
 		631039C7EF48480B163790B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF0B585961FB2A5247CB163 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +104,14 @@
 		2D63ADAD1C4BB31600C3A1AE /* XXBreastFeedFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBreastFeedFooterView.h; sourceTree = "<group>"; };
 		2D63ADAE1C4BB31600C3A1AE /* XXBreastFeedFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBreastFeedFooterView.m; sourceTree = "<group>"; };
 		2D63ADB01C4BB31E00C3A1AE /* XXBreastFeedFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XXBreastFeedFooterView.xib; sourceTree = "<group>"; };
+		2DCFBFCD1C4BEBDB00E99820 /* XXFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXFeedViewController.h; sourceTree = "<group>"; };
+		2DCFBFCE1C4BEBDB00E99820 /* XXFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXFeedViewController.m; sourceTree = "<group>"; };
+		2DCFBFD01C4BEBEB00E99820 /* XXLifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLifeViewController.h; sourceTree = "<group>"; };
+		2DCFBFD11C4BEBEB00E99820 /* XXLifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLifeViewController.m; sourceTree = "<group>"; };
+		2DCFBFD31C4BEBF300E99820 /* XXBodyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBodyViewController.h; sourceTree = "<group>"; };
+		2DCFBFD41C4BEBF300E99820 /* XXBodyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBodyViewController.m; sourceTree = "<group>"; };
+		2DCFBFD61C4BEC7F00E99820 /* XXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBaseViewController.h; sourceTree = "<group>"; };
+		2DCFBFD71C4BEC7F00E99820 /* XXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBaseViewController.m; sourceTree = "<group>"; };
 		45F5D0CCA4EBEB93721F23C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4EF0B585961FB2A5247CB163 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F993BBCF0255C11B61F27C85 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +260,14 @@
 			children = (
 				2D63AD6E1C4A291100C3A1AE /* XXHomeViewController.h */,
 				2D63AD6F1C4A291100C3A1AE /* XXHomeViewController.m */,
+				2DCFBFD61C4BEC7F00E99820 /* XXBaseViewController.h */,
+				2DCFBFD71C4BEC7F00E99820 /* XXBaseViewController.m */,
+				2DCFBFCD1C4BEBDB00E99820 /* XXFeedViewController.h */,
+				2DCFBFCE1C4BEBDB00E99820 /* XXFeedViewController.m */,
+				2DCFBFD01C4BEBEB00E99820 /* XXLifeViewController.h */,
+				2DCFBFD11C4BEBEB00E99820 /* XXLifeViewController.m */,
+				2DCFBFD31C4BEBF300E99820 /* XXBodyViewController.h */,
+				2DCFBFD41C4BEBF300E99820 /* XXBodyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -523,16 +543,20 @@
 				2D63AD9C1C4A294B00C3A1AE /* UIView+Extension.m in Sources */,
 				2D63AD961C4A294B00C3A1AE /* NSString+Emoji.m in Sources */,
 				2D63AD7D1C4A291100C3A1AE /* AppDelegate.m in Sources */,
+				2DCFBFD51C4BEBF300E99820 /* XXBodyViewController.m in Sources */,
 				2D63AD991C4A294B00C3A1AE /* UIButton+CZ.m in Sources */,
 				2D63ADA71C4B6BDB00C3A1AE /* XXRecordValue.m in Sources */,
 				2D63AD9A1C4A294B00C3A1AE /* UIImage+CZ.m in Sources */,
 				2D63AD7E1C4A291100C3A1AE /* main.m in Sources */,
 				2D63AD9B1C4A294B00C3A1AE /* UITextView+Extension.m in Sources */,
+				2DCFBFD21C4BEBEB00E99820 /* XXLifeViewController.m in Sources */,
+				2DCFBFD81C4BEC7F00E99820 /* XXBaseViewController.m in Sources */,
 				2D63AD951C4A294B00C3A1AE /* NSString+CZ.m in Sources */,
 				2D63AD981C4A294B00C3A1AE /* UIBarButtonItem+Extension.m in Sources */,
 				2D63ADA41C4A6C3D00C3A1AE /* Foundation+Log.m in Sources */,
 				2D63AD7C1C4A291100C3A1AE /* XXHomeViewController.m in Sources */,
 				2D63ADA21C4A688600C3A1AE /* XXFeedRecord.m in Sources */,
+				2DCFBFCF1C4BEBDB00E99820 /* XXFeedViewController.m in Sources */,
 				2D63AD971C4A294B00C3A1AE /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

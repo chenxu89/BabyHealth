@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RS3DSegmentedControl.h>
 
-@interface XXHomeViewController : UIViewController<RS3DSegmentedControlDelegate>
-@property(nonatomic,strong) RS3DSegmentedControl *ageSegmentedControl;
+@interface XXHomeViewController : UIViewController
 @end
