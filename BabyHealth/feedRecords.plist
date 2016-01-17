@@ -8,22 +8,57 @@
 		<key>subKey</key>
 		<string></string>
 		<key>unit</key>
-		<string>次数/日</string>
-		<key>realValue</key>
-		<integer>3</integer>
-		<key>minimumValue</key>
-		<integer>0</integer>
-		<key>maximumValue</key>
-		<integer>10</integer>
+		<string></string>
 		<key>fractionDigits</key>
 		<integer>0</integer>
-		<key>colorSections</key>
-		<array>
+		<key>custom</key>
+		<true/>
+		<key>recordValue</key>
+		<dict>
+			<key>realValue</key>
+			<integer>0</integer>
+			<key>minimumValue</key>
+			<integer>0</integer>
+			<key>dangerLessValue</key>
+			<integer>1</integer>
+			<key>warningLessValue</key>
+			<integer>0</integer>
+			<key>normalValue</key>
 			<integer>2</integer>
+			<key>warningMoreValue</key>
+			<integer>0</integer>
+			<key>maximumValue</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>mainKey</key>
+		<string>母乳</string>
+		<key>subKey</key>
+		<string></string>
+		<key>unit</key>
+		<string>次数/日</string>
+		<key>fractionDigits</key>
+		<integer>0</integer>
+		<key>custom</key>
+		<false/>
+		<key>recordValue</key>
+		<dict>
+			<key>realValue</key>
+			<integer>3</integer>
+			<key>minimumValue</key>
+			<integer>0</integer>
+			<key>dangerLessValue</key>
+			<integer>2</integer>
+			<key>warningLessValue</key>
 			<integer>4</integer>
+			<key>normalValue</key>
 			<integer>6</integer>
+			<key>warningMoreValue</key>
 			<integer>8</integer>
-		</array>
+			<key>maximumValue</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
 	<dict>
 		<key>mainKey</key>
@@ -32,21 +67,27 @@
 		<string></string>
 		<key>unit</key>
 		<string>毫升/日</string>
-		<key>realValue</key>
-		<integer>50</integer>
-		<key>minimumValue</key>
-		<integer>0</integer>
-		<key>maximumValue</key>
-		<integer>100</integer>
 		<key>fractionDigits</key>
 		<integer>0</integer>
-		<key>colorSections</key>
-		<array>
+		<key>custom</key>
+		<false/>
+		<key>recordValue</key>
+		<dict>
+			<key>realValue</key>
+			<integer>50</integer>
+			<key>minimumValue</key>
+			<integer>0</integer>
+			<key>dangerLessValue</key>
 			<integer>20</integer>
+			<key>warningLessValue</key>
 			<integer>40</integer>
+			<key>normalValue</key>
 			<integer>60</integer>
+			<key>warningMoreValue</key>
 			<integer>80</integer>
-		</array>
+			<key>maximumValue</key>
+			<integer>100</integer>
+		</dict>
 	</dict>
 	<dict>
 		<key>mainKey</key>
@@ -55,21 +96,27 @@
 		<string></string>
 		<key>unit</key>
 		<string>毫升/日</string>
-		<key>realValue</key>
-		<integer>30</integer>
-		<key>minimumValue</key>
-		<integer>0</integer>
-		<key>maximumValue</key>
-		<integer>100</integer>
 		<key>fractionDigits</key>
 		<integer>0</integer>
-		<key>colorSections</key>
-		<array>
+		<key>custom</key>
+		<false/>
+		<key>recordValue</key>
+		<dict>
+			<key>realValue</key>
+			<integer>30</integer>
+			<key>minimumValue</key>
+			<integer>0</integer>
+			<key>dangerLessValue</key>
 			<integer>20</integer>
+			<key>warningLessValue</key>
 			<integer>40</integer>
+			<key>normalValue</key>
 			<integer>60</integer>
+			<key>warningMoreValue</key>
 			<integer>80</integer>
-		</array>
+			<key>maximumValue</key>
+			<integer>100</integer>
+		</dict>
 	</dict>
 	<dict>
 		<key>mainKey</key>
@@ -78,90 +125,27 @@
 		<string>米粉</string>
 		<key>unit</key>
 		<string>克/日</string>
-		<key>realValue</key>
-		<integer>70</integer>
-		<key>minimumValue</key>
-		<integer>0</integer>
-		<key>maximumValue</key>
-		<integer>100</integer>
 		<key>fractionDigits</key>
 		<integer>0</integer>
-		<key>colorSections</key>
-		<array>
+		<key>custom</key>
+		<false/>
+		<key>recordValue</key>
+		<dict>
+			<key>realValue</key>
+			<integer>10</integer>
+			<key>minimumValue</key>
+			<integer>0</integer>
+			<key>dangerLessValue</key>
 			<integer>20</integer>
+			<key>warningLessValue</key>
 			<integer>40</integer>
+			<key>normalValue</key>
 			<integer>60</integer>
+			<key>warningMoreValue</key>
 			<integer>80</integer>
-		</array>
-	</dict>
-	<dict>
-		<key>mainKey</key>
-		<string>粮谷类</string>
-		<key>subKey</key>
-		<string>面食</string>
-		<key>unit</key>
-		<string>克/日</string>
-		<key>realValue</key>
-		<integer>90</integer>
-		<key>minimumValue</key>
-		<integer>0</integer>
-		<key>maximumValue</key>
-		<integer>100</integer>
-		<key>fractionDigits</key>
-		<integer>0</integer>
-		<key>colorSections</key>
-		<array>
-			<integer>20</integer>
-			<integer>40</integer>
-			<integer>60</integer>
-			<integer>80</integer>
-		</array>
-	</dict>
-	<dict>
-		<key>mainKey</key>
-		<string>粮谷类</string>
-		<key>subKey</key>
-		<string>粥</string>
-		<key>unit</key>
-		<string>克/日</string>
-		<key>realValue</key>
-		<integer>10</integer>
-		<key>minimumValue</key>
-		<integer>0</integer>
-		<key>maximumValue</key>
-		<integer>100</integer>
-		<key>fractionDigits</key>
-		<integer>0</integer>
-		<key>colorSections</key>
-		<array>
-			<integer>20</integer>
-			<integer>40</integer>
-			<integer>60</integer>
-			<integer>80</integer>
-		</array>
-	</dict>
-	<dict>
-		<key>mainKey</key>
-		<string>粮谷类</string>
-		<key>subKey</key>
-		<string>饭</string>
-		<key>unit</key>
-		<string>克/日</string>
-		<key>realValue</key>
-		<integer>75</integer>
-		<key>minimumValue</key>
-		<integer>0</integer>
-		<key>maximumValue</key>
-		<integer>100</integer>
-		<key>fractionDigits</key>
-		<integer>0</integer>
-		<key>colorSections</key>
-		<array>
-			<integer>20</integer>
-			<integer>40</integer>
-			<integer>60</integer>
-			<integer>80</integer>
-		</array>
+			<key>maximumValue</key>
+			<integer>100</integer>
+		</dict>
 	</dict>
 </array>
 </plist>

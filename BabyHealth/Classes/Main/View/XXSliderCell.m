@@ -9,7 +9,7 @@
 #import "XXSliderCell.h"
 #import "XXFeedRecord.h"
 
-@interface XXSliderCell ()
+@interface XXSliderCell ()<ASValueTrackingSliderDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *mainKeyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 @property (weak, nonatomic) IBOutlet UILabel *realLabel;
@@ -47,17 +47,24 @@
 - (void)setFeedRecord:(XXFeedRecord *)feedRecord{
     _feedRecord = feedRecord;
     
+    XXRecordValue *recordValue = feedRecord.recordValue;
     
-    self.slider.minimumValue = feedRecord.minimumValue;// 最小值
-    self.slider.maximumValue = feedRecord.maximumValue;// 最大值
-    self.slider.value = feedRecord.realValue; // thumb初始位置
+    self.slider.minimumValue = recordValue.minimumValue;// 最小值
+    self.slider.maximumValue = recordValue.maximumValue;// 最大值
+    self.slider.value = recordValue.realValue; // thumb初始位置
     [self.slider setMaxFractionDigitsDisplayed:feedRecord.fractionDigits];// 小数位数
     
     self.mainKeyLabel.text = [NSString stringWithFormat:@"%@ %@", feedRecord.mainKey, feedRecord.subKey];
     self.unitLabel.text = feedRecord.unit;
-    self.realLabel.text = [NSString stringWithFormat:@"%0.0f", feedRecord.realValue];
     
-    [self setupSliderColorSections:feedRecord];
+    if (feedRecord.custom) {// 如果是定制数字内容
+        self.slider.dataSource = self;
+        self.realLabel.text = [self slider:self.slider stringForValue:recordValue.realValue];
+    }else{// 如果不是定制数字内容
+        self.realLabel.text = [NSString stringWithFormat:@"%0.0f", recordValue.realValue];
+    }
+    
+    [self setupSliderColorSections:recordValue];
 }
 
 
@@ -67,12 +74,16 @@
     // Configure the view for the selected state
 }
 
-// 拖动slider的时候，
+// 拖动slider的时候
 - (IBAction)dragSlider:(ASValueTrackingSlider *)slider {
     
-    self.realLabel.text = [NSString stringWithFormat:@"%0.0f", slider.value];
+    if (self.feedRecord.custom) {// 如果是需要定制数字内容
+        self.realLabel.text = [self slider:self.slider stringForValue:slider.value];
+    }else{
+        self.realLabel.text = [NSString stringWithFormat:@"%0.0f", slider.value];
+    }
     
-    [self setupSliderColorSections:self.feedRecord];
+    [self setupSliderColorSections:self.feedRecord.recordValue];
 }
 
 /**
@@ -80,24 +91,25 @@
  *
  *  @param feedRecord 数据模型
  */
-- (void)setupSliderColorSections:(XXFeedRecord *)feedRecord{
+- (void)setupSliderColorSections:(XXRecordValue *)recordValue{
     
     UIColor *red = [UIColor redColor];
     UIColor *yellow = [UIColor yellowColor];
     UIColor *green = [UIColor greenColor];
-    if (self.slider.value < [feedRecord.colorSections[0] floatValue]) {
+    
+    if (self.slider.value <= recordValue.dangerLessValue) {
         
         [self.slider setPopUpViewColor:red];
         self.slider.minimumTrackTintColor = red;
-    }else if (self.slider.value < [feedRecord.colorSections[1] floatValue]){
+    }else if (self.slider.value <= recordValue.warningLessValue){
         
         [self.slider setPopUpViewColor:yellow];
         self.slider.minimumTrackTintColor = yellow;
-    }else if (self.slider.value < [feedRecord.colorSections[2] floatValue]){
+    }else if (self.slider.value <= recordValue.normalValue){
         
         [self.slider setPopUpViewColor:green];
         self.slider.minimumTrackTintColor = green;
-    }else if (self.slider.value < [feedRecord.colorSections[3] floatValue]){
+    }else if (self.slider.value <= recordValue.warningMoreValue){
         
         [self.slider setPopUpViewColor:yellow];
         self.slider.minimumTrackTintColor = yellow;
@@ -106,6 +118,23 @@
         [self.slider setPopUpViewColor:red];
         self.slider.minimumTrackTintColor = red;
     }
+}
+
+#pragma mark - ASValueTrackingSliderDataSource
+
+- (NSString *)slider:(ASValueTrackingSlider *)slider stringForValue:(float)value;
+{
+    XXRecordValue *recordValue = self.feedRecord.recordValue;
+    NSString *s;
+    if (value <= recordValue.dangerLessValue) {
+        s = @"少";
+    } else if (value <= recordValue.normalValue) {
+        s = @"中";
+    } else {
+        s = @"多";
+    }
+    
+    return s;
 }
 
 @end
