@@ -80,9 +80,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row % 2 == 1) {
-        cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
-    }
+//    if (indexPath.row % 2 == 1) {
+//        cell.backgroundColor = [UIColor colorWithWhite:0.90 alpha:1.0];
+//    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

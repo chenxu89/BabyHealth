@@ -18,6 +18,16 @@
 
 @implementation XXSliderCell
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    
+    if (self = [super initWithCoder:aDecoder]) {
+        // cell选中时候不变色
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+
+    return self;
+}
+
 - (void)awakeFromNib
 {
     self.slider.delegate = self;
