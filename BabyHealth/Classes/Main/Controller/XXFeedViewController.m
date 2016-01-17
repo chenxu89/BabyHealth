@@ -7,12 +7,10 @@
 //
 
 #import "XXFeedViewController.h"
-#import "XXSliderCell.h"
-#import <MJExtension.h>
 #import "XXFeedRecord.h"
 #import "XXBreastFeedFooterView.h"
 
-static NSString * const SliderCellIdentifier = @"SliderCellIdentifier";
+
 static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewIdentifier";
 
 @interface XXFeedViewController ()<XXBreastFeedFooterViewDelegate>
@@ -33,9 +31,6 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // 注册cell
-    [self.tableView registerNib:[UINib nibWithNibName:@"XXSliderCell" bundle:nil] forCellReuseIdentifier:SliderCellIdentifier];
     
     // 注册FooterView
     [self.tableView registerNib:[UINib nibWithNibName:@"XXBreastFeedFooterView" bundle:nil] forHeaderFooterViewReuseIdentifier:BreastFeedFooterViewIdentifier];
@@ -82,12 +77,6 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    if (indexPath.row % 2 == 1) {
-    //        cell.backgroundColor = [UIColor colorWithWhite:0.90 alpha:1.0];
-    //    }
-}
-
 #pragma mark - cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     // 断母乳就隐藏section0的所有cell
@@ -100,6 +89,14 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
     }
     return 80;
 }
+
+#pragma mark - Table view delegate
+
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//        if (indexPath.row % 2 == 1) {
+//            cell.backgroundColor = [UIColor colorWithWhite:0.90 alpha:1.0];
+//        }
+//}
 
 #pragma mark - 自定义的FooterView
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{

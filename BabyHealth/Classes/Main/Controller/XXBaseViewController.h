@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <RS3DSegmentedControl.h>
+#import <MJExtension.h>
+#import "XXSliderCell.h"
+
+static NSString * const SliderCellIdentifier = @"SliderCellIdentifier";
 
 @interface XXBaseViewController : UIViewController <RS3DSegmentedControlDelegate>
+
 @property(nonatomic,strong) RS3DSegmentedControl *ageSegmentedControl;
 
 @property (nonatomic, weak) UITableView *tableView;

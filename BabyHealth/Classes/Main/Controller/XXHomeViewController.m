@@ -25,6 +25,7 @@
     UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:arr];
     [segment setTintColor:HWTintColor];
     [segment addTarget:self action:@selector(selected:) forControlEvents:UIControlEventValueChanged];
+    segment.selectedSegmentIndex = 0;//选中第几个segment 一般用于初始化时选中
     self.navigationItem.titleView = segment;
     
     // XXFeedViewController

@@ -32,6 +32,9 @@
     [self.view addSubview:tableView];
     [self.view bringSubviewToFront:tableView];
     self.tableView = tableView;
+    
+    // 注册XXSliderCell
+    [self.tableView registerNib:[UINib nibWithNibName:@"XXSliderCell" bundle:nil] forCellReuseIdentifier:SliderCellIdentifier];
 }
 
 #pragma mark - RS3DSegmentedControlDelegate
