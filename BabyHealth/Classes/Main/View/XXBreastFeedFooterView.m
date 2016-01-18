@@ -26,7 +26,7 @@
 }
 
 - (void)dealloc{
-    HWTestLog;
+//    HWTestLog;
 }
 
 @end
