@@ -94,7 +94,6 @@
 
 // 拖动slider的时候
 - (IBAction)dragSlider:(ASValueTrackingSlider *)slider {
-
     self.realLabel.text = [NSString stringWithFormat:@"%0.0f", slider.value];
     
     // 设置realValue

@@ -15,21 +15,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HAT-A2-7Aq" customClass="ASValueTrackingSlider">
-                        <rect key="frame" x="10" y="40" width="300" height="31.5"/>
-                        <connections>
-                            <action selector="dragSlider:" destination="KGk-i7-Jjw" eventType="valueChanged" id="1E4-1L-nkm"/>
-                        </connections>
-                    </slider>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-t7-LgE" userLabel="realLabel">
                         <rect key="frame" x="224" y="11" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-vj-gdv" userLabel="unitLabel">
-                        <rect key="frame" x="270" y="12" width="37.5" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -49,6 +37,18 @@
                             </mask>
                         </variation>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-vj-gdv" userLabel="unitLabel">
+                        <rect key="frame" x="270" y="12" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HAT-A2-7Aq" customClass="ASValueTrackingSlider">
+                        <rect key="frame" x="10" y="40.5" width="300" height="31.5"/>
+                        <connections>
+                            <action selector="dragSlider:" destination="KGk-i7-Jjw" eventType="valueChanged" id="1E4-1L-nkm"/>
+                        </connections>
+                    </slider>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Q9C-vj-gdv" firstAttribute="leading" secondItem="Qxs-t7-LgE" secondAttribute="trailing" constant="4" id="CUq-iQ-5kT"/>
