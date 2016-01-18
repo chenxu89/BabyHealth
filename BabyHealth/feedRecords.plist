@@ -203,7 +203,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>50</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -232,7 +232,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>35</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -263,7 +263,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>55</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -292,7 +292,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>85</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -321,7 +321,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>34</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -350,7 +350,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>65</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -379,7 +379,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>15</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -408,7 +408,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>45</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -437,7 +437,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>70</integer>
+				<integer>95</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>

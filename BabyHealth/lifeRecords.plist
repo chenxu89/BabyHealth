@@ -41,7 +41,7 @@
 			<key>recordValue</key>
 			<dict>
 				<key>realValue</key>
-				<integer>3</integer>
+				<integer>5</integer>
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
@@ -114,15 +114,15 @@
 				<key>minimumValue</key>
 				<integer>0</integer>
 				<key>dangerLessValue</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>warningLessValue</key>
-				<integer>4</integer>
+				<integer>2</integer>
 				<key>normalValue</key>
-				<integer>6</integer>
+				<integer>3</integer>
 				<key>warningMoreValue</key>
-				<integer>8</integer>
+				<integer>4</integer>
 				<key>maximumValue</key>
-				<integer>10</integer>
+				<integer>5</integer>
 			</dict>
 		</dict>
 	</array>
