@@ -60,7 +60,7 @@
 //    [self.view addSubview:newVc.view];
     
     // 动画切换两个view
-    [UIView transitionFromView:oldVc.view toView:newVc.view duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
+    [UIView transitionFromView:oldVc.view toView:newVc.view duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve completion:nil];
     //这个api 原理   ：
     //        1:[fromvalue.superview addSubview:tovalue];
     //        2:[fromvalue removeFromSuperview];

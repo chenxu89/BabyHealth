@@ -18,6 +18,7 @@
 {
     if (!_bodyRecords) {
         _bodyRecords = [XXRecord objectArrayWithFilename:@"bodyRecords.plist"];
+        self.records = _bodyRecords;
     }
     return _bodyRecords;
 }

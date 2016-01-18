@@ -20,4 +20,7 @@ static NSString * const SliderCellIdentifier = @"SliderCellIdentifier";
 @property(nonatomic,strong) RS3DSegmentedControl *ageSegmentedControl;
 
 @property (nonatomic, weak) UITableView *tableView;
+
+// 模型数据
+@property (nonatomic, strong) NSArray *records;
 @end

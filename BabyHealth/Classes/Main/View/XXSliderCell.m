@@ -23,6 +23,7 @@
     if (self = [super initWithCoder:aDecoder]) {
         // cell选中时候不变色
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.backgroundColor = [UIColor colorWithWhite:0.97 alpha:1.0];
     }
 
     return self;
@@ -51,6 +52,7 @@
     
     self.slider.minimumValue = recordValue.minimumValue;// 最小值
     self.slider.maximumValue = recordValue.maximumValue;// 最大值
+    self.slider.maximumTrackTintColor = [UIColor whiteColor];
     
     self.slider.value = recordValue.realValue; // thumb初始位置
     
@@ -90,7 +92,8 @@
 - (void)setupSliderColorSections:(XXRecordValue *)recordValue{
     
     UIColor *green = [UIColor colorWithHue:0.3 saturation:0.65 brightness:0.8 alpha:1.0];
-    UIColor *yellow = [UIColor colorWithHue:0.15 saturation:0.9 brightness:0.9 alpha:1.0];
+//    UIColor *yellow = [UIColor colorWithHue:0.15 saturation:0.9 brightness:0.9 alpha:1.0];
+    UIColor *yellow = [UIColor orangeColor];
     UIColor *red = [UIColor colorWithHue:0.0 saturation:0.8 brightness:1.0 alpha:1.0];
     
     // slider左边在滑动时候会变色
@@ -121,6 +124,8 @@
     self.mainKeyLabel.textColor = self.slider.minimumTrackTintColor;
     self.realLabel.textColor = self.slider.minimumTrackTintColor;
     self.unitLabel.textColor = self.slider.minimumTrackTintColor;
+    // cell中thumb也跟着变色
+    self.slider.thumbTintColor = self.slider.minimumTrackTintColor;  
 }
 
 

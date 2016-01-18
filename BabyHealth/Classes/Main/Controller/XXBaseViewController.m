@@ -9,10 +9,18 @@
 #import "XXBaseViewController.h"
 
 @interface XXBaseViewController () <UITableViewDataSource, UITableViewDelegate>
-
 @end
 
 @implementation XXBaseViewController
+
+//- (NSArray *)records
+//{
+//    if (!_records) {
+//        _records = [[<#class#> alloc] init];
+//    }
+//    return _records;
+//}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -76,4 +84,51 @@
 - (void)didSelectSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl
 {
 }
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.records.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSArray *rows = self.records[section];
+    return rows.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 模型数据
+    NSArray *rows = self.records[indexPath.section];
+    XXRecord *record = rows[indexPath.row];
+    
+    if (record.cellStyle == XXRecordCellStyleSlide) {// slider cell
+        XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:SliderCellIdentifier forIndexPath:indexPath];
+        cell.record = record;
+        return cell;
+        
+    }else{// check cell
+        XXCheckCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckCellIdentifier forIndexPath:indexPath];
+        cell.record = record;
+        
+        return cell;
+    }
+}
+
+#pragma mark - cell的高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // 模型数据
+    NSArray *rows = self.records[indexPath.section];
+    XXRecord *record = rows[indexPath.row];
+    if (record.cellStyle == XXRecordCellStyleSlide) {
+        return 80;
+    }else{
+        return 60;
+    }
+    
+}
+
 @end
