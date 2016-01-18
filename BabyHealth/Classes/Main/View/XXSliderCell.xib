@@ -23,19 +23,9 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tr-hA-Yrf" userLabel="mainKeyLabel">
                         <rect key="frame" x="12" y="12" width="42" height="20.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="151" id="Nib-5n-iI4"/>
-                            <constraint firstAttribute="height" constant="21" id="mHh-dX-D5S"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Nib-5n-iI4"/>
-                                <exclude reference="mHh-dX-D5S"/>
-                            </mask>
-                        </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-vj-gdv" userLabel="unitLabel">
                         <rect key="frame" x="270" y="12" width="37.5" height="18"/>
@@ -54,7 +44,6 @@
                     <constraint firstItem="Q9C-vj-gdv" firstAttribute="leading" secondItem="Qxs-t7-LgE" secondAttribute="trailing" constant="4" id="CUq-iQ-5kT"/>
                     <constraint firstItem="Qxs-t7-LgE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="G5k-pg-aWU"/>
                     <constraint firstItem="Q9C-vj-gdv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="O2M-5e-teA"/>
-                    <constraint firstItem="Qxs-t7-LgE" firstAttribute="leading" secondItem="6Tr-hA-Yrf" secondAttribute="trailing" constant="61" id="QLz-C5-5aq"/>
                     <constraint firstAttribute="bottom" secondItem="HAT-A2-7Aq" secondAttribute="bottom" constant="8.5" id="RDL-Rf-ZKr"/>
                     <constraint firstItem="6Tr-hA-Yrf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="UbM-rD-is7"/>
                     <constraint firstItem="HAT-A2-7Aq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Yfd-IB-4G1"/>
@@ -63,11 +52,6 @@
                     <constraint firstAttribute="trailingMargin" secondItem="Q9C-vj-gdv" secondAttribute="trailing" constant="4" id="mUd-9u-fSa"/>
                     <constraint firstItem="HAT-A2-7Aq" firstAttribute="top" secondItem="6Tr-hA-Yrf" secondAttribute="bottom" constant="8" id="y2c-7m-z9Y"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="QLz-C5-5aq"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="mainKeyLabel" destination="6Tr-hA-Yrf" id="seW-Zu-p5F"/>

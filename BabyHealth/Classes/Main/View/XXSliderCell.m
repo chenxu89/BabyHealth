@@ -141,10 +141,10 @@
     // cell的背景颜色
     self.backgroundColor = tintColor;
     
-    // cell的右边的颜色
-    self.slider.maximumTrackTintColor = tintColor;
-    
-    // popUpView的文字颜色
+    // cell的右边的颜色（这个在iOS9以下，不能实时改变，否则会出现bug，iOS9可以）
+//    self.slider.maximumTrackTintColor = tintColor;
+
+//    // popUpView的文字颜色
     self.slider.textColor = tintColor;
 }
 
