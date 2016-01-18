@@ -28,7 +28,6 @@ typedef enum{
 @property (nonatomic, copy) NSString *subKey;
 @property (nonatomic, copy) NSString *unit;
 @property (nonatomic, assign) NSUInteger fractionDigits;
-@property (nonatomic, assign, getter=isCustom) BOOL custom;
 @property (nonatomic, strong) XXRecordValue *recordValue;
 
 //check类型

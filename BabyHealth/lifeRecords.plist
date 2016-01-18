@@ -4,62 +4,28 @@
 <array>
 	<array>
 		<dict>
-			<key>mainKey</key>
+			<key>cellStyle</key>
+			<integer>1</integer>
+			<key>title</key>
 			<string>食欲</string>
-			<key>subKey</key>
-			<string></string>
-			<key>unit</key>
-			<string></string>
-			<key>fractionDigits</key>
-			<integer>0</integer>
-			<key>custom</key>
-			<true/>
-			<key>recordValue</key>
-			<dict>
-				<key>realValue</key>
-				<integer>0</integer>
-				<key>minimumValue</key>
-				<integer>0</integer>
-				<key>dangerLessValue</key>
-				<integer>1</integer>
-				<key>warningLessValue</key>
-				<integer>0</integer>
-				<key>normalValue</key>
-				<integer>2</integer>
-				<key>warningMoreValue</key>
-				<integer>0</integer>
-				<key>maximumValue</key>
-				<integer>3</integer>
-			</dict>
+			<key>options</key>
+			<array>
+				<string>好</string>
+				<string>中</string>
+				<string>差</string>
+			</array>
 		</dict>
 		<dict>
-			<key>mainKey</key>
-			<string>汗多、烦躁或夜惊</string>
-			<key>subKey</key>
-			<string></string>
-			<key>unit</key>
-			<string></string>
-			<key>fractionDigits</key>
-			<integer>0</integer>
-			<key>custom</key>
-			<true/>
-			<key>recordValue</key>
-			<dict>
-				<key>realValue</key>
-				<integer>0</integer>
-				<key>minimumValue</key>
-				<integer>0</integer>
-				<key>dangerLessValue</key>
-				<integer>1</integer>
-				<key>warningLessValue</key>
-				<integer>0</integer>
-				<key>normalValue</key>
-				<integer>2</integer>
-				<key>warningMoreValue</key>
-				<integer>0</integer>
-				<key>maximumValue</key>
-				<integer>3</integer>
-			</dict>
+			<key>cellStyle</key>
+			<integer>1</integer>
+			<key>title</key>
+			<string>夜晚</string>
+			<key>options</key>
+			<array>
+				<string>汗多</string>
+				<string>烦躁</string>
+				<string>夜惊</string>
+			</array>
 		</dict>
 		<dict>
 			<key>mainKey</key>
@@ -118,6 +84,17 @@
 				<key>maximumValue</key>
 				<integer>10</integer>
 			</dict>
+		</dict>
+		<dict>
+			<key>cellStyle</key>
+			<integer>1</integer>
+			<key>title</key>
+			<string>生活方式</string>
+			<key>options</key>
+			<array>
+				<string>集体</string>
+				<string>散居</string>
+			</array>
 		</dict>
 		<dict>
 			<key>mainKey</key>

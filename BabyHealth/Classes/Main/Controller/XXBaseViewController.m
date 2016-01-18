@@ -9,6 +9,7 @@
 #import "XXBaseViewController.h"
 
 @interface XXBaseViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @end
 
 @implementation XXBaseViewController

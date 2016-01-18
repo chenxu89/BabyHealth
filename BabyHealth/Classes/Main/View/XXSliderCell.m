@@ -9,7 +9,7 @@
 #import "XXSliderCell.h"
 #import "XXRecord.h"
 
-@interface XXSliderCell ()<ASValueTrackingSliderDataSource>
+@interface XXSliderCell ()
 @property (weak, nonatomic) IBOutlet UILabel *mainKeyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 @property (weak, nonatomic) IBOutlet UILabel *realLabel;
@@ -59,12 +59,7 @@
     self.mainKeyLabel.text = [NSString stringWithFormat:@"%@ %@", record.mainKey, record.subKey];
     self.unitLabel.text = record.unit;
     
-    if (record.custom) {// 如果是定制数字内容
-        self.slider.dataSource = self;
-        self.realLabel.text = [self slider:self.slider stringForValue:recordValue.realValue];
-    }else{// 如果不是定制数字内容
-        self.realLabel.text = [NSString stringWithFormat:@"%0.0f", recordValue.realValue];
-    }
+    self.realLabel.text = [NSString stringWithFormat:@"%0.0f", recordValue.realValue];
     
     [self setupSliderColorSections:recordValue];
 }
@@ -78,12 +73,8 @@
 
 // 拖动slider的时候
 - (IBAction)dragSlider:(ASValueTrackingSlider *)slider {
-    
-    if (self.record.custom) {// 如果是需要定制数字内容
-        self.realLabel.text = [self slider:self.slider stringForValue:slider.value];
-    }else{
-        self.realLabel.text = [NSString stringWithFormat:@"%0.0f", slider.value];
-    }
+
+    self.realLabel.text = [NSString stringWithFormat:@"%0.0f", slider.value];
     
     // 设置realValue
     self.record.recordValue.realValue = slider.value;
@@ -132,21 +123,5 @@
     self.unitLabel.textColor = self.slider.minimumTrackTintColor;
 }
 
-#pragma mark - ASValueTrackingSliderDataSource
-
-- (NSString *)slider:(ASValueTrackingSlider *)slider stringForValue:(float)value;
-{
-    XXRecordValue *recordValue = self.record.recordValue;
-    NSString *s;
-    if (value <= recordValue.dangerLessValue) {
-        s = @"少";
-    } else if (value <= recordValue.normalValue) {
-        s = @"中";
-    } else {
-        s = @"多";
-    }
-    
-    return s;
-}
 
 @end
