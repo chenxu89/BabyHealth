@@ -14,21 +14,22 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWb-H5-Iif">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksA-Br-PCO">
-                            <rect key="frame" x="77" y="6" width="46" height="30"/>
-                            <state key="normal" title="Button">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="stopBreastFeed:" destination="iN0-l3-epB" eventType="touchUpInside" id="jJk-e8-qKj"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="断母乳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR2-Ey-320">
                             <rect key="frame" x="11" y="11" width="58" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksA-Br-PCO">
+                            <rect key="frame" x="77" y="11" width="20" height="20"/>
+                            <state key="normal" backgroundImage="breastFeed_normal">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" backgroundImage="breastFeed_selected"/>
+                            <connections>
+                                <action selector="stopBreastFeed:" destination="iN0-l3-epB" eventType="touchUpInside" id="jJk-e8-qKj"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -42,4 +43,8 @@
             <point key="canvasLocation" x="254" y="81"/>
         </view>
     </objects>
+    <resources>
+        <image name="breastFeed_normal" width="44" height="44"/>
+        <image name="breastFeed_selected" width="44" height="44"/>
+    </resources>
 </document>

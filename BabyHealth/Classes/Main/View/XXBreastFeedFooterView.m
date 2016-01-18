@@ -15,8 +15,8 @@
 @implementation XXBreastFeedFooterView
 
 - (void)awakeFromNib {
-    [self.stopBreastFeedBtn setTitle:@"NO" forState:UIControlStateNormal];
-    [self.stopBreastFeedBtn setTitle:@"YES" forState:UIControlStateSelected];
+//    [self.stopBreastFeedBtn setTitle:@"NO" forState:UIControlStateNormal];
+//    [self.stopBreastFeedBtn setTitle:@"YES" forState:UIControlStateSelected];
 }
 - (IBAction)stopBreastFeed:(UIButton *)btn {
     

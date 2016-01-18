@@ -38,7 +38,7 @@
     self.slider.popUpViewCornerRadius = 5.0;// 弹窗圆角
     self.slider.font = [UIFont fontWithName:@"GillSans-Bold" size:22];// 弹窗文字字体
     self.slider.textColor = [UIColor whiteColor];// 弹窗文字颜色
-    self.slider.thumbTintColor = HWTintColor;// thumb的颜色
+//    self.slider.thumbTintColor = HWTintColor;// thumb的颜色
    
     [self.unitLabel sizeToFit];
 
@@ -49,6 +49,11 @@
     self.unitLabel.textColor = XXSliderCellTextColor;
     self.slider.thumbTintColor = XXSliderCellTextColor;// 圆球的颜色
     self.slider.popUpViewColor = XXSliderCellTextColor;// 弹窗的背景颜色
+
+    // 设置thumb图片
+    UIImage *thumbImage = [UIImage originImage:[UIImage imageNamed:@"slider_thumb"] scaleToSize:CGSizeMake(20, 20)];
+    [self.slider setThumbImage:thumbImage forState:UIControlStateNormal];
+    [self.slider setThumbImage:thumbImage forState:UIControlStateHighlighted];
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
