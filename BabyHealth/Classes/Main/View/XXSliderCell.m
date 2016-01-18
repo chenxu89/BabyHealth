@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 @property (weak, nonatomic) IBOutlet UILabel *realLabel;
 
+#define XXSliderCellTextColor [UIColor whiteColor]
 @end
 
 @implementation XXSliderCell
@@ -40,7 +41,14 @@
     self.slider.thumbTintColor = HWTintColor;// thumb的颜色
    
     [self.unitLabel sizeToFit];
+
+    // 颜色
     
+    self.mainKeyLabel.textColor = XXSliderCellTextColor;
+    self.realLabel.textColor = XXSliderCellTextColor;
+    self.unitLabel.textColor = XXSliderCellTextColor;
+    self.slider.thumbTintColor = XXSliderCellTextColor;// 圆球的颜色
+    self.slider.popUpViewColor = XXSliderCellTextColor;// 弹窗的背景颜色
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -57,7 +65,7 @@
     
     self.slider.minimumValue = recordValue.minimumValue;// 最小值
     self.slider.maximumValue = recordValue.maximumValue;// 最大值
-    self.slider.maximumTrackTintColor = [UIColor whiteColor];
+    self.slider.minimumTrackTintColor = [UIColor whiteColor];
     
     self.slider.value = recordValue.realValue; // thumb初始位置
     
@@ -101,36 +109,36 @@
     UIColor *yellow = [UIColor orangeColor];
     UIColor *red = [UIColor colorWithHue:0.0 saturation:0.8 brightness:1.0 alpha:1.0];
     
+    UIColor *tintColor;
     // slider左边在滑动时候会变色
     if (self.slider.value <= recordValue.dangerLessValue) {
-        
-        [self.slider setPopUpViewColor:red];
-        self.slider.minimumTrackTintColor = red;
+        tintColor = red;
     }else if (self.slider.value <= recordValue.warningLessValue){
-        
-        [self.slider setPopUpViewColor:yellow];
-        self.slider.minimumTrackTintColor = yellow;
+        tintColor = yellow;
     }else if (self.slider.value <= recordValue.normalValue){
-        
-        [self.slider setPopUpViewColor:green];
-        self.slider.minimumTrackTintColor = green;
+        tintColor = green;
     }else if (self.slider.value <= recordValue.warningMoreValue){
-        
-        [self.slider setPopUpViewColor:yellow];
-        self.slider.minimumTrackTintColor = yellow;
+        tintColor = yellow;
     }else{
-        
-        [self.slider setPopUpViewColor:red];
-        self.slider.minimumTrackTintColor = red;
+        tintColor = red;
     }
     
+    // cell中各种label文字颜色
+//    self.mainKeyLabel.textColor = tintColor;
+//    self.realLabel.textColor = tintColor;
+//    self.unitLabel.textColor = tintColor;
     
-    // cell中各种label也跟着变色
-    self.mainKeyLabel.textColor = self.slider.minimumTrackTintColor;
-    self.realLabel.textColor = self.slider.minimumTrackTintColor;
-    self.unitLabel.textColor = self.slider.minimumTrackTintColor;
-    // cell中thumb也跟着变色
-    self.slider.thumbTintColor = self.slider.minimumTrackTintColor;  
+    // cell中thumb颜色
+//    self.slider.thumbTintColor = tintColor;
+    
+    // cell的背景颜色
+    self.backgroundColor = tintColor;
+    
+    // cell的右边的颜色
+    self.slider.maximumTrackTintColor = tintColor;
+    
+    // popUpView的文字颜色
+    self.slider.textColor = tintColor;
 }
 
 
