@@ -38,8 +38,13 @@
     self.slider.font = [UIFont fontWithName:@"GillSans-Bold" size:22];// 弹窗文字字体
     self.slider.textColor = [UIColor whiteColor];// 弹窗文字颜色
     self.slider.thumbTintColor = HWTintColor;// thumb的颜色
+   
+    [self.unitLabel sizeToFit];
+    
 }
-
+- (void)layoutSubviews{
+    [super layoutSubviews];
+}
 - (void)sliderWillDisplayPopUpView:(ASValueTrackingSlider *)slider;
 {
     [self.superview bringSubviewToFront:self];
