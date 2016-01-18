@@ -13,14 +13,13 @@
 
 @implementation XXBaseViewController
 
-//- (NSArray *)records
-//{
-//    if (!_records) {
-//        _records = [[<#class#> alloc] init];
-//    }
-//    return _records;
-//}
-
+- (NSArray *)records
+{
+    if (!_records) {
+        _records = [[NSArray alloc] init];
+    }
+    return _records;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -128,7 +127,6 @@
     }else{
         return 60;
     }
-    
 }
 
 @end

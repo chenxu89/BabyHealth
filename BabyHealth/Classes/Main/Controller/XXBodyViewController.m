@@ -18,7 +18,6 @@
 {
     if (!_bodyRecords) {
         _bodyRecords = [XXRecord objectArrayWithFilename:@"bodyRecords.plist"];
-        self.records = _bodyRecords;
     }
     return _bodyRecords;
 }
@@ -26,38 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.records = self.bodyRecords;
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return self.bodyRecords.count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    NSArray *rows = self.bodyRecords[section];
-    return rows.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSArray *rows = self.bodyRecords[indexPath.section];
-    
-    XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:SliderCellIdentifier forIndexPath:indexPath];
-    
-    cell.record = rows[indexPath.row];
-    
-    return cell;
-}
-
-#pragma mark - cell的高度
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return 80;
-}
-
 
 @end

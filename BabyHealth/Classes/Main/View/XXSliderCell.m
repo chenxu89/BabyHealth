@@ -36,7 +36,7 @@
     // customize slider
     self.slider.popUpViewCornerRadius = 5.0;// 弹窗圆角
     self.slider.font = [UIFont fontWithName:@"GillSans-Bold" size:22];// 弹窗文字字体
-    self.slider.textColor = [UIColor colorWithHue:0.55 saturation:1.0 brightness:0.5 alpha:1];// 弹窗文字颜色
+    self.slider.textColor = [UIColor whiteColor];// 弹窗文字颜色
     self.slider.thumbTintColor = HWTintColor;// thumb的颜色
 }
 
