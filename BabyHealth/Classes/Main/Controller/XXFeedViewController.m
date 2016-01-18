@@ -50,13 +50,27 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // 模型数据
     NSArray *rows = self.feedRecords[indexPath.section];
+    XXRecord *record = rows[indexPath.row];
     
-    XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:SliderCellIdentifier forIndexPath:indexPath];
-    
-    cell.feedRecord = rows[indexPath.row];
-    
-    // 断母乳就隐藏section0的所有cell
+    if (record.cellStyle == XXRecordCellStyleSlide) {// slider cell
+        XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:SliderCellIdentifier forIndexPath:indexPath];
+        cell.record = record;
+        [self setupStopBreastFeed:indexPath cell:cell];
+        return cell;
+        
+    }else{// check cell
+        XXCheckCell *cell = [tableView dequeueReusableCellWithIdentifier:CheckCellIdentifier forIndexPath:indexPath];
+        cell.record = record;
+        [self setupStopBreastFeed:indexPath cell:cell];
+        
+        return cell;
+    }
+}
+
+#pragma mark - 断母乳就隐藏section0的所有cell
+- (void)setupStopBreastFeed:(NSIndexPath *)indexPath cell:(UITableViewCell *)cell{
     if (indexPath.section == 0) {
         if (self.isStopBreastFeed) {
             //            cell.userInteractionEnabled = NO;
@@ -72,8 +86,6 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
             cell.hidden = NO;
         }
     }
-    
-    return cell;
 }
 
 #pragma mark - cell的高度
@@ -82,11 +94,18 @@ static NSString * const BreastFeedFooterViewIdentifier = @"BreastFeedFooterViewI
     if (indexPath.section == 0) {
         if (self.isStopBreastFeed) {
             return 0;
-        }else{
-            return 80;
         }
     }
-    return 80;
+    
+    // 模型数据
+    NSArray *rows = self.feedRecords[indexPath.section];
+    XXRecord *record = rows[indexPath.row];
+    if (record.cellStyle == XXRecordCellStyleSlide) {
+        return 80;
+    }else{
+        return 60;
+    }
+    
 }
 
 #pragma mark - Table view delegate

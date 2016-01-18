@@ -47,7 +47,7 @@
     
     XXSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:SliderCellIdentifier forIndexPath:indexPath];
     
-    cell.feedRecord = rows[indexPath.row];
+    cell.record = rows[indexPath.row];
     
     return cell;
 }

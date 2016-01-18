@@ -11,6 +11,7 @@
 #import <MJExtension.h>
 #import "XXSliderCell.h"
 #import "XXRecord.h"
+#import "XXCheckCell.h"
 
 static NSString * const SliderCellIdentifier = @"SliderCellIdentifier";
 

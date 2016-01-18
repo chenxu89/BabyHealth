@@ -15,5 +15,5 @@
 /**
  *  数据模型
  */
-@property (nonatomic, strong) XXRecord *feedRecord;
+@property (nonatomic, strong) XXRecord *record;
 @end

@@ -4,6 +4,20 @@
 <array>
 	<array>
 		<dict>
+			<key>cellStyle</key>
+			<integer>1</integer>
+			<key>title</key>
+			<string>母乳</string>
+			<key>options</key>
+			<array>
+				<string>多</string>
+				<string>中</string>
+				<string>少</string>
+			</array>
+		</dict>
+		<dict>
+			<key>cellStyle</key>
+			<integer>0</integer>
 			<key>mainKey</key>
 			<string>母乳</string>
 			<key>subKey</key>
@@ -64,6 +78,8 @@
 	</array>
 	<array>
 		<dict>
+			<key>cellStyle</key>
+			<integer>0</integer>
 			<key>mainKey</key>
 			<string>牛奶</string>
 			<key>subKey</key>
@@ -93,6 +109,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>cellStyle</key>
+			<integer>0</integer>
 			<key>mainKey</key>
 			<string>奶粉</string>
 			<key>subKey</key>
@@ -122,6 +140,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>cellStyle</key>
+			<integer>0</integer>
 			<key>mainKey</key>
 			<string>粮谷类</string>
 			<key>subKey</key>
@@ -151,6 +171,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>cellStyle</key>
+			<integer>0</integer>
 			<key>mainKey</key>
 			<string>粮谷类</string>
 			<key>subKey</key>
@@ -180,6 +202,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>cellStyle</key>
+			<integer>0</integer>
 			<key>mainKey</key>
 			<string>粮谷类</string>
 			<key>subKey</key>
@@ -209,6 +233,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>cellStyle</key>
+			<integer>0</integer>
 			<key>mainKey</key>
 			<string>粮谷类</string>
 			<key>subKey</key>

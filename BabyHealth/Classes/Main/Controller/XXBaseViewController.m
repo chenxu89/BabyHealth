@@ -35,6 +35,9 @@
     
     // 注册XXSliderCell
     [self.tableView registerNib:[UINib nibWithNibName:@"XXSliderCell" bundle:nil] forCellReuseIdentifier:SliderCellIdentifier];
+    
+    // 注册XXCheckCell
+    [self.tableView registerClass:[XXCheckCell class] forCellReuseIdentifier:CheckCellIdentifier];    
 }
 
 #pragma mark - RS3DSegmentedControlDelegate

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D16BB871C4C7A43000C9573 /* XXCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D16BB861C4C7A43000C9573 /* XXCheckCell.m */; };
+		2D16BB981C4C88AC000C9573 /* XXCheckButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D16BB971C4C88AC000C9573 /* XXCheckButton.m */; };
+		2D16BB9C1C4C94D2000C9573 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D16BB9B1C4C94D2000C9573 /* DLRadioButton.m */; };
 		2D63AD3A1C4A15AD00C3A1AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D63AD381C4A15AD00C3A1AE /* Main.storyboard */; };
 		2D63AD3C1C4A15AD00C3A1AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D63AD3B1C4A15AD00C3A1AE /* Assets.xcassets */; };
 		2D63AD3F1C4A15AD00C3A1AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D63AD3D1C4A15AD00C3A1AE /* LaunchScreen.storyboard */; };
@@ -59,6 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D16BB851C4C7A43000C9573 /* XXCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCheckCell.h; sourceTree = "<group>"; };
+		2D16BB861C4C7A43000C9573 /* XXCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCheckCell.m; sourceTree = "<group>"; };
+		2D16BB961C4C88AC000C9573 /* XXCheckButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCheckButton.h; sourceTree = "<group>"; };
+		2D16BB971C4C88AC000C9573 /* XXCheckButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCheckButton.m; sourceTree = "<group>"; };
+		2D16BB9A1C4C94D2000C9573 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		2D16BB9B1C4C94D2000C9573 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		2D63AD2C1C4A15AD00C3A1AE /* BabyHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D63AD391C4A15AD00C3A1AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D63AD3B1C4A15AD00C3A1AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D16BB991C4C94D2000C9573 /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				2D16BB9A1C4C94D2000C9573 /* DLRadioButton.h */,
+				2D16BB9B1C4C94D2000C9573 /* DLRadioButton.m */,
+			);
+			path = DLRadioButton;
+			sourceTree = "<group>";
+		};
 		2D63AD231C4A15AD00C3A1AE = {
 			isa = PBXGroup;
 			children = (
@@ -266,14 +284,14 @@
 			children = (
 				2D63AD6E1C4A291100C3A1AE /* XXHomeViewController.h */,
 				2D63AD6F1C4A291100C3A1AE /* XXHomeViewController.m */,
-				2DCFBFD61C4BEC7F00E99820 /* XXBaseViewController.h */,
-				2DCFBFD71C4BEC7F00E99820 /* XXBaseViewController.m */,
 				2DCFBFCD1C4BEBDB00E99820 /* XXFeedViewController.h */,
 				2DCFBFCE1C4BEBDB00E99820 /* XXFeedViewController.m */,
 				2DCFBFD01C4BEBEB00E99820 /* XXLifeViewController.h */,
 				2DCFBFD11C4BEBEB00E99820 /* XXLifeViewController.m */,
 				2DCFBFD31C4BEBF300E99820 /* XXBodyViewController.h */,
 				2DCFBFD41C4BEBF300E99820 /* XXBodyViewController.m */,
+				2DCFBFD61C4BEC7F00E99820 /* XXBaseViewController.h */,
+				2DCFBFD71C4BEC7F00E99820 /* XXBaseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +299,7 @@
 		2D63AD701C4A291100C3A1AE /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				2D16BB991C4C94D2000C9573 /* DLRadioButton */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -316,6 +335,10 @@
 		2D63AD771C4A291100C3A1AE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D16BB851C4C7A43000C9573 /* XXCheckCell.h */,
+				2D16BB861C4C7A43000C9573 /* XXCheckCell.m */,
+				2D16BB961C4C88AC000C9573 /* XXCheckButton.h */,
+				2D16BB971C4C88AC000C9573 /* XXCheckButton.m */,
 				2D63AD781C4A291100C3A1AE /* XXSliderCell.h */,
 				2D63AD791C4A291100C3A1AE /* XXSliderCell.m */,
 				2D63AD7A1C4A291100C3A1AE /* XXSliderCell.xib */,
@@ -559,10 +582,13 @@
 				2D63AD9B1C4A294B00C3A1AE /* UITextView+Extension.m in Sources */,
 				2DCFBFD21C4BEBEB00E99820 /* XXLifeViewController.m in Sources */,
 				2DCFBFD81C4BEC7F00E99820 /* XXBaseViewController.m in Sources */,
+				2D16BB871C4C7A43000C9573 /* XXCheckCell.m in Sources */,
 				2D63AD951C4A294B00C3A1AE /* NSString+CZ.m in Sources */,
 				2D63AD981C4A294B00C3A1AE /* UIBarButtonItem+Extension.m in Sources */,
 				2D63ADA41C4A6C3D00C3A1AE /* Foundation+Log.m in Sources */,
 				2D63AD7C1C4A291100C3A1AE /* XXHomeViewController.m in Sources */,
+				2D16BB981C4C88AC000C9573 /* XXCheckButton.m in Sources */,
+				2D16BB9C1C4C94D2000C9573 /* DLRadioButton.m in Sources */,
 				2D63ADA21C4A688600C3A1AE /* XXRecord.m in Sources */,
 				2DCFBFCF1C4BEBDB00E99820 /* XXFeedViewController.m in Sources */,
 				2D63AD971C4A294B00C3A1AE /* NSString+Extension.m in Sources */,
