@@ -50,7 +50,7 @@
     self.unitLabel.textColor = XXSliderCellTextColor;
     self.slider.thumbTintColor = XXSliderCellTextColor;// 圆球的颜色
     self.slider.popUpViewColor = XXSliderCellTextColor;// 弹窗的背景颜色
-
+    
     // 设置thumb图片
 //    UIImage *thumbImage = [UIImage originImage:[UIImage imageNamed:@"slider_thumb"] scaleToSize:CGSizeMake(20, 20)];
 //    [self.slider setThumbImage:thumbImage forState:UIControlStateNormal];
@@ -100,8 +100,6 @@
     self.record.recordValue.realValue = slider.value;
     
     [self setupSliderColorSections:self.record.recordValue];
-    
-    HWLog(@"%@", NSStringFromCGRect(self.slider.frame));
 }
 
 /**
